@@ -184,10 +184,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "002863fc8c4c5790",
+  "active": "cbfbed806eecc6f8",
   "lastOpenFiles": [
-    "Untitled.md",
+    "DSA/Complexity/time and space complexity.md",
     "DSA/Problems/LC-62 Unique Paths.md",
+    "DSA/time and space complexity.md",
+    "DSA/Complexity",
+    "DSA/Time/space complexity.md",
+    "DSA/Time",
+    "DSA/Patterns/2D DP.md",
+    "Untitled.md",
     "DSA/Problems",
     "DSA/Patterns",
     "test.md",
@@ -196,7 +202,6 @@
     "Language",
     "System Design",
     "DSA",
-    "image",
-    "新增 文字文件.txt"
+    "image"
   ]
 }
