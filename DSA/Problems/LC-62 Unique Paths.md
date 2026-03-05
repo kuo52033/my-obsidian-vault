@@ -61,4 +61,4 @@ def uniquePaths(self, m: int, n: int) -> int:
 **Space 優化思路**（進階）： 每次只需要「上一行」的資料，可以只維護一個 1D array 滾動更新。
 
 ### 我卡在哪 / 要注意的地方
-無
+Space complexity 如何優化成 O (n) ?
