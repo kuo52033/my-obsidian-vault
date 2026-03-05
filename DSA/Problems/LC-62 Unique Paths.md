@@ -33,6 +33,7 @@ dp[i][0] = 1  # 第一列
 dp[0][j] = 1  # 第一行
 ```
 
+---
 ## 實作
 
 python
@@ -53,6 +54,8 @@ def uniquePaths(self, m: int, n: int) -> int:
 
     return dp[m-1][n-1]
 ```
+
+---
 ## [[time and space complexity]]
 
 - Time: O(m x n)，每格走一次
@@ -60,5 +63,20 @@ def uniquePaths(self, m: int, n: int) -> int:
 
 **Space 優化思路**（進階）： 每次只需要「上一行」的資料，可以只維護一個 1D array 滾動更新。
 
+```python
+class Solution:
+
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = [1]*n
+
+        for i in range(1, m):
+            for j in range(1, n):
+                dp[j] = dp[j] + dp[j-1]
+
+        return dp[n-1]
+```
+
+--- 
 ### 我卡在哪 / 要注意的地方
+
 Space complexity 如何優化成 O (n) ?
