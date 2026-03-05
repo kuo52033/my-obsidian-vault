@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Problems/LC-62 Unique Paths.md",
+                "file": "DSA/Problems/LC-57 Insert Interval.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LC-62 Unique Paths"
+              "title": "LC-57 Insert Interval"
             }
           }
         ]
@@ -164,8 +164,19 @@
               "icon": "lucide-list",
               "title": "test 的大綱"
             }
+          },
+          {
+            "id": "75cf2c5779792cda",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -181,13 +192,16 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
   "active": "cbfbed806eecc6f8",
   "lastOpenFiles": [
-    "DSA/Complexity/time and space complexity.md",
     "DSA/Problems/LC-62 Unique Paths.md",
+    "DSA/Problems/LC-57 Insert Interval.md",
+    "DSA/Patterns/Interval Pattern.md",
+    "DSA/Complexity/time and space complexity.md",
     "DSA/time and space complexity.md",
     "DSA/Complexity",
     "DSA/Time/space complexity.md",
