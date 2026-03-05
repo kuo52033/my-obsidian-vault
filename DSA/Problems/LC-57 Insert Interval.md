@@ -79,12 +79,6 @@ def insert(self, intervals, newInterval):
 ---
 
 ## 我卡在哪 / 要注意的地方
-- 左邊結束的沒重疊判斷是?
-- 如何讓 newInterval 加入 result? 
--  newInterval 的重疊判斷是?
-
-
-- 重疊判斷條件容易寫錯：
-    - 左邊結束條件是 `intervals[i][1] < newInterval[0]`（嚴格小於）
-    - 重疊條件是 `intervals[i][0] <= newInterval[1]`（小於等於，端點相接也算重疊）
-- `newInterval` 直接 mutate 沒問題，因為它本來就是要被合併的目標
+- 左邊結束的沒重疊判斷是? ::  `intervals[i][1] < newInterval[0]
+- 如何讓 newInterval 加入 result?::  `newInterval` 直接 mutate 沒問題
+-  newInterval 的重疊判斷是?::`intervals[i][0] <= newInterval[1]`
