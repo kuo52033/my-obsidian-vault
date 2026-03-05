@@ -79,6 +79,9 @@ def insert(self, intervals, newInterval):
 ---
 
 ## 我卡在哪 / 要注意的地方
+- 左邊結束的沒重疊判斷是?
+- 如何讓 newInterval 加入 result? 
+-  newInterval 的重疊判斷是?
 
 
 - 重疊判斷條件容易寫錯：
