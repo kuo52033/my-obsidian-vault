@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eebb21bada323e84",
+        "id": "964d279c2a2c40a5",
         "type": "tabs",
         "children": [
           {
-            "id": "ed2f6b3d40974ce0",
+            "id": "cbfbed806eecc6f8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DSA/Problems/LC-62 Unique Paths.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "LC-62 Unique Paths"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:grid",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜尋"
+              "title": "Search"
             }
           },
           {
@@ -180,8 +184,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ed2f6b3d40974ce0",
+  "active": "002863fc8c4c5790",
   "lastOpenFiles": [
+    "Untitled.md",
+    "DSA/Problems/LC-62 Unique Paths.md",
+    "DSA/Problems",
+    "DSA/Patterns",
     "test.md",
     "Interview Prep",
     "Infra",
