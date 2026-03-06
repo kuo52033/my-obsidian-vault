@@ -35,3 +35,5 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 -  Step 4 - Ping/Pong 保持連線存活
 	TCP 連線如果長時間沒有資料傳輸，中間的防火牆或 Load Balancer 可能會把它砍掉。 所以 WebSocket 有內建的心跳機制
+
+## Authentication
