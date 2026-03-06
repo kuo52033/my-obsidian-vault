@@ -7,3 +7,23 @@ WebSocket 解決這個問題：
 > **一次握手，建立持久的雙向連線。之後 Client 和 Server 都可以隨時主動發訊息。**
 
 ### 連線過程
+
+WebSocket 握手其實就是一個**特殊的 HTTP Request**。 Client 用 HTTP 敲門，說「我想升級成 WebSocket」，Server 同意後，這條 TCP 連線就不再走 HTTP 了。
+
+-  Step 1 - Client 發送升級請求
+```http
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket 
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Sec-WebSocket-Version: 13
+```
+
+- Step 2 - Server 回應
+```http
+HTTP/1.1 101 Switching Protocols 
+Upgrade: websocket 
+Connection: Upgrade 
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+```
