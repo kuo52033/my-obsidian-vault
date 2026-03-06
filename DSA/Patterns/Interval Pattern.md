@@ -1,1 +1,3 @@
 - [[LC-57 Insert Interval]]
+- [[LC-56 Merge Intervals]]
+- 
