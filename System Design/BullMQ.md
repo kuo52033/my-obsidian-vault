@@ -67,10 +67,6 @@ const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
 |Worker|Consumer Group 裡的 Consumer|
 |Job 完成 ACK|XACK|
 |Job ID|Stream 訊息 ID|
-- 為什麼不用 List
-	- job 被 pop 走之後就消失了，crash 了就不見
-	- 沒有 ACK 機制，無法確認是否真的處理完
-	- 難以實作多個 Worker 競爭消費
 
 ```bash
 bull:{queue-name}           ← Stream，存 waiting 的 job
@@ -78,4 +74,17 @@ bull:{queue-name}:active    ← 正在處理的 job
 bull:{queue-name}:completed ← 完成的 job
 bull:{queue-name}:failed    ← 失敗的 job
 bull:{queue-name}:delayed   ← 等待延遲的 job
+```
+
+```js
+const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
+
+代表建立一個專門取得 ai-reply stream 的 consumer group，並且建立一個 worker，這個 worker 一次取出5個 job，同時處理
+
+Consumer Group: bull:ai-reply 
+├── Worker 1 (concurrency: 3) ── 同時處理 job1, job2, job3 
+├── Worker 2 (concurrency: 3) ── 同時處理 job4, job5, job6 
+└── Worker 3 (concurrency: 3) ── 同時處理 job7, job8, job9
+
+總吞吐量 = Worker 數量 × concurrency。
 ```
