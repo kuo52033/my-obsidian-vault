@@ -27,3 +27,8 @@ Upgrade: websocket
 Connection: Upgrade 
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
+
+- Step 3 - TCP 連線被接管
+	- 這條 TCP 連線繼續存在，不會關閉 
+	- 但上面跑的不再是 HTTP，而是 **WebSocket Frame 格式** 
+	- 雙方都可以隨時主動發訊息
