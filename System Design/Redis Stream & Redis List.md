@@ -1,7 +1,41 @@
 ### Redis List
-最簡單的資料結構，就是一個**[[Double Link List]]**
-```
+最簡單的資料結構，就是一個 [[Double Link List]]
+```bash
 HEAD                                TAIL
  ↓                                   ↓
 [A] ←──→ [B] ←──→ [C] ←──→ [D] ←──→ [E]
 ```
+用 List 做 job queue 產生的問題
+
+1. job 消失
+	1. worker BRPOP 拿走 Job, 處理到一半 crash, Job 消失，永遠不會被處理
+2. 沒有 ACK
+	1. 沒有辦法確認 Job 是否真的有處理成功
+3. 難以監控
+	1.  Job 被 pop 走就消失了，無法查詢「目前有哪些 Job 正在處理」
+
+### Redis Stream
+> [!INFO] Streams 是 Redis 5.0 加入的資料結構，專門為訊息佇列設計。 本質是一個**append-only log**，訊息只會往後加，不會消失。
+
+```bash
+Stream: my-stream 
+┌──────────────┬─────────────────────────┐ 
+│ ID           │ Data                    │ ├──────────────┼─────────────────────────┤  
+│ 1700000001-0 │ { type: 'msg', ... }    │ 
+│ 1700000002-0 │ { type: 'msg', ... }    │ 
+│ 1700000003-0 │ { type: 'msg', ... }    │ └──────────────┴─────────────────────────┘ 
+      ↑ timestamp-sequence
+      
+# 寫入訊息（* 表示自動產生 ID） 
+XADD my-stream * type msg text hello 
+# 讀取（從頭開始） 
+XRANGE my-stream 0 + 
+# 讀取（從某個 ID 之後） 
+XRANGE my-stream 1700000002-0 + 
+# 讀取最新的 N 筆 
+XREVRANGE my-stream + - COUNT 10
+```
+### Consumer Group 
+
+> [!TIP] 單純讀 Stream，所有人都看到一樣的東西。 Consumer Group 讓你做到**競爭消費**
+
