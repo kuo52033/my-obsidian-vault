@@ -79,3 +79,4 @@ Group B 讀取 → 也拿到 job1, job2, job3 ← 各自獨立，互不影響
 | ------------------- | --------------------- |
 | 同一個 Group，多個 Worker | 競爭消費，job 只給一個人        |
 | 不同 Group            | 各自獨立，job 每個 Group 都收到 |
+Redis Stream 本身支援一次讀多個 Stream ，一個 Consumer 可以同時從多個 Stream 拿 job，BullMQ 要付費版才支援一個 worker 消費多個 queue。
