@@ -16,3 +16,15 @@
 | Producer | 把 job 丟進 queue       |
 | Queue    | 儲存待處理的 job（存在 Redis） |
 | Worker   | 從 queue 拿 job 來處理    |
+
+---
+
+### Job 的生命週期
+```
+waiting
+   ↓
+active        ← Worker 拿走，開始處理
+   ↓
+┌──┴───────────┐
+completed   failed (retry)
+```
