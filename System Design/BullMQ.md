@@ -31,3 +31,28 @@ completed   failed (retry)
 
 ---
 ### 重要設定
+
+Retry
+``` js
+await queue.add('generate', data, {
+  attempts: 3,          // 最多重試 3 次
+  backoff: {
+    type: 'exponential',
+    delay: 1000         // 1s, 2s, 4s
+  }
+})
+```
+
+Delay
+```js
+// 5 秒後才開始處理
+await queue.add('generate', data, {
+  delay: 5000
+})
+```
+
+Concurrency
+```js
+// 這個 Worker 同時最多處理 5 個 job 
+const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
+```
