@@ -56,3 +56,26 @@ Concurrency
 // 這個 Worker 同時最多處理 5 個 job 
 const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
 ```
+
+---
+### 底層結構 (Redis Stream)
+
+|BullMQ 概念|Redis Streams 概念|
+|---|---|
+|Queue|Stream|
+|Job|Stream 裡的一筆訊息|
+|Worker|Consumer Group 裡的 Consumer|
+|Job 完成 ACK|XACK|
+|Job ID|Stream 訊息 ID|
+- 為什麼不用 List
+	- job 被 pop 走之後就消失了，crash 了就不見
+	- 沒有 ACK 機制，無法確認是否真的處理完
+	- 難以實作多個 Worker 競爭消費
+
+```
+bull:{queue-name}           ← Stream，存 waiting 的 job
+bull:{queue-name}:active    ← 正在處理的 job
+bull:{queue-name}:completed ← 完成的 job
+bull:{queue-name}:failed    ← 失敗的 job
+bull:{queue-name}:delayed   ← 等待延遲的 job
+```
