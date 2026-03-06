@@ -23,8 +23,11 @@
 ```
 waiting
    ↓
-active        ← Worker 拿走，開始處理
+active  ← Worker 拿走，開始處理
    ↓
 ┌──┴───────────┐
 completed   failed (retry)
 ```
+
+---
+### 重要設定
