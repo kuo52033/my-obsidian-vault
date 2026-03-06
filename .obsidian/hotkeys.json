@@ -14,5 +14,13 @@
       ],
       "key": "I"
     }
+  ],
+  "editor:insert-table": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
   ]
 }

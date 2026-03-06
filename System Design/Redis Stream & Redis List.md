@@ -58,7 +58,24 @@ XGROUP CREATE my-stream workers 0
 XREADGROUP GROUP workers consumer1 COUNT 1 STREAMS my-stream > 
 # 處理完，發 ACK 
 XACK my-stream workers 1700000001-0
+
+Redis 內部維護每個 Group 的 last-delivered-id：，每次派發後，last-delivered-id 往後移，所以不會重複派給同一個 Group 裡的不同 Worker。
 ```
 
 > [!NOTE] **不同 Group 之間，每個 job 都會被各自收到，不競爭。 同一個 Group 內，每個 job 只會給一個 Worker，互相競爭。**
 
+```bash
+Stream: my-stream 
+┌──────┬──────┬──────┐ 
+│ job1 │ job2 │ job3 │ 
+└──────┴──────┴──────┘ 
+Group A last-delivered-id: 0 
+Group B last-delivered-id: 0 
+Group A 讀取 → 拿到 job1, job2, job3 
+Group B 讀取 → 也拿到 job1, job2, job3 ← 各自獨立，互不影響
+```
+
+| 情況                  | 行為                    |
+| ------------------- | --------------------- |
+| 同一個 Group，多個 Worker | 競爭消費，job 只給一個人        |
+| 不同 Group            | 各自獨立，job 每個 Group 都收到 |
