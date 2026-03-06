@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/Redis Stream.md",
+                "file": "System Design/BullMQ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redis Stream"
+              "title": "BullMQ"
             }
           }
         ]
@@ -198,8 +198,10 @@
   },
   "active": "cbfbed806eecc6f8",
   "lastOpenFiles": [
-    "System Design/Redis sub&pub.md",
     "System Design/Redis Stream.md",
+    "System Design/BullMQ.md",
+    "Untitled",
+    "System Design/Redis sub&pub.md",
     "Infra/CS (Custom Service).md",
     "System Design/Websocket.md",
     "DSA/Complexity/time and space complexity.md",
@@ -220,7 +222,6 @@
     "Interview Prep",
     "Infra",
     "Language",
-    "System Design",
-    "DSA"
+    "System Design"
   ]
 }
