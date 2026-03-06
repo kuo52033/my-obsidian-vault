@@ -54,4 +54,4 @@ XREADGROUP GROUP workers consumer1 COUNT 1 STREAMS my-stream >
 # 處理完，發 ACK 
 XACK my-stream workers 1700000001-0
 ```
-**同一個 Group 裡，每條訊息只會給一個 Consumer**。
+**不同 Group 之間，每個 job 都會被各自收到，不競爭。 同一個 Group 內，每個 job 只會給一個 Worker，互相競爭。**
