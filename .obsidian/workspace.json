@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/Redis Stream & Redis List.md",
+                "file": "System Design/BullMQ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redis Stream & Redis List"
+              "title": "BullMQ"
             }
           }
         ],
@@ -213,10 +213,11 @@
   },
   "active": "9e49a8437d7c7c09",
   "lastOpenFiles": [
-    "System Design/Websocket.md",
-    "System Design/BullMQ.md",
     "System Design/Redis Stream & Redis List.md",
+    "System Design/BullMQ.md",
     "System Design/Redis sub&pub.md",
+    "Redis Stream.md",
+    "System Design/Websocket.md",
     "DSA/Basic/Double Link List.md",
     "Untitled",
     "Infra/CS (Custom Service).md",

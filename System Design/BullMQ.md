@@ -58,7 +58,7 @@ const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
 ```
 
 ---
-### 底層結構 (Redis Stream)
+### 底層結構 ([[Redis Stream & Redis List|Redis Stream]])
 
 |BullMQ 概念|Redis Streams 概念|
 |---|---|
@@ -72,7 +72,7 @@ const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
 	- 沒有 ACK 機制，無法確認是否真的處理完
 	- 難以實作多個 Worker 競爭消費
 
-```
+```bash
 bull:{queue-name}           ← Stream，存 waiting 的 job
 bull:{queue-name}:active    ← 正在處理的 job
 bull:{queue-name}:completed ← 完成的 job
