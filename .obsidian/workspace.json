@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Websocket.md",
+                "file": "System Design/Redis sub&pub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Websocket"
+              "title": "Redis sub&pub"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#握手的本質",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "書籤"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -200,7 +199,8 @@
   "active": "cbfbed806eecc6f8",
   "lastOpenFiles": [
     "Infra/CS (Custom Service).md",
-    "Websocket.md",
+    "System Design/Redis sub&pub.md",
+    "System Design/Websocket.md",
     "DSA/Complexity/time and space complexity.md",
     "DSA/Basic/Array.md",
     "DSA/Problems/LC-62 Unique Paths.md",
