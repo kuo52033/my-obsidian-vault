@@ -32,3 +32,6 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 	- 這條 TCP 連線繼續存在，不會關閉 
 	- 但上面跑的不再是 HTTP，而是 **WebSocket Frame 格式** 
 	- 雙方都可以隨時主動發訊息
+
+-  Step 4 - Ping/Pong 保持連線存活
+	TCP 連線如果長時間沒有資料傳輸，中間的防火牆或 Load Balancer 可能會把它砍掉。 所以 WebSocket 有內建的心跳機制
