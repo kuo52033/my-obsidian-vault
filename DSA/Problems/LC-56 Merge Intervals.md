@@ -75,4 +75,4 @@ Merge Intervals 框架 :: sort by 起點 → 逐一掃描 → 看 result[-1] 決
 
 ## 相關題目
 
-- [[LC-57-Insert-Interval]] ← 已排序版本，三段式掃描
+- [[LC-57 Insert Interval]] ← 已排序版本，三段式掃描
