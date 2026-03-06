@@ -7,3 +7,12 @@
 這就是為什麼需要 **async job queue**：
 
 > **把耗時的工作丟進 queue，讓 worker 在背景處理，主流程繼續跑。**
+
+---
+### 核心概念
+
+| 角色       | 說明                   |
+| -------- | -------------------- |
+| Producer | 把 job 丟進 queue       |
+| Queue    | 儲存待處理的 job（存在 Redis） |
+| Worker   | 從 queue 拿 job 來處理    |
