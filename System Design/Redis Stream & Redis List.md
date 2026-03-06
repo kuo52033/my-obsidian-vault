@@ -46,5 +46,12 @@ Consumer Group: workers
 ├── Consumer 1 ── 拿走 job1 
 ├── Consumer 2 ── 拿走 job2 
 └── Consumer 3 ── 拿走 job3
+
+# 建立 Consumer Group
+XGROUP CREATE my-stream workers 0 
+# Consumer 1 來拿 job（> 表示拿還沒被這個 group 處理的） 
+XREADGROUP GROUP workers consumer1 COUNT 1 STREAMS my-stream > 
+# 處理完，發 ACK 
+XACK my-stream workers 1700000001-0
 ```
 **同一個 Group 裡，每條訊息只會給一個 Consumer**。
