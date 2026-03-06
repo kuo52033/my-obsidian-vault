@@ -39,3 +39,12 @@ XREVRANGE my-stream + - COUNT 10
 
 > [!TIP] 單純讀 Stream，所有人都看到一樣的東西。 Consumer Group 讓你做到**競爭消費**
 
+```bash
+Stream 
+  ↓ 
+Consumer Group: workers 
+├── Consumer 1 ── 拿走 job1 
+├── Consumer 2 ── 拿走 job2 
+└── Consumer 3 ── 拿走 job3
+```
+**同一個 Group 裡，每條訊息只會給一個 Consumer**。
