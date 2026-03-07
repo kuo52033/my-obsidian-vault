@@ -55,14 +55,18 @@ Collection: messages
 ✅ Scale out by adding machines, not upgrading to a bigger one.
 
 4. Replica Set
-Data is automatically synced across multiple nodes
+Data is automatically synced across multiple nodes 
 ```bash
-Primary ── write ──> Secondary 1 
+Primary ── async write ──> Secondary 1 
 		──────────> Secondary 2
 		
 Primary goes down → Secondary auto-elected as new Primary
 ```
 ✅ High availability with automatic failover.
+
+> [!NOTE] Eventual Consistency
+
+預設行為是採用 CAP 中的 AP，但可以調整行為，用 Write Concern 和 Read Concern
 
 ---
 
@@ -82,5 +86,5 @@ Primary goes down → Secondary auto-elected as new Primary
 
 > [!NOTE] Transaction Limitations
 > - Single document operations are atomic 
-> - Cross-document, cross-collection transactions supported since v4.0
+> - Cross-document, cross-collection transactions supported since v4.0, use Session, ==只能在 **Replica Set** 或 **Sharded Cluster** 上使用，standalone 不支援==
 > - But performance is worse than SQL transactions → official recommendation is to avoid them
