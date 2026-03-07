@@ -77,3 +77,8 @@ Primary goes down → Secondary auto-elected as new Primary
 - Strong consistency requirements (e.g. financial transactions) 
 - Highly relational data with many foreign keys 
 - Full ACID guarantees needed
+
+> [!NOTE] Transaction Limitations
+> - Single document operations are atomic 
+> - Cross-document, cross-collection transactions supported since v4.0
+> - But performance is worse than SQL transactions → official recommendation is to avoid them
