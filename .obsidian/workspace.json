@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/CS (Custom Service)/requirements.md",
+                "file": "Infra/CS (Custom Service)/Capacity Estimation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "requirements"
+              "title": "Capacity Estimation"
             }
           }
         ],
@@ -213,8 +213,9 @@
   },
   "active": "9e49a8437d7c7c09",
   "lastOpenFiles": [
-    "Infra/CS (Custom Service)/technology.md",
-    "Infra/CS (Custom Service)/requirements.md",
+    "Infra/CS (Custom Service)/Technology.md",
+    "Infra/CS (Custom Service)/Requirements.md",
+    "Infra/CS (Custom Service)/Capacity Estimation.md",
     "Infra/CS (Custom Service).md",
     "Infra/CS (Custom Service)/technology",
     "Infra/CS (Custom Service)",
@@ -244,7 +245,6 @@
     "DSA/Complexity",
     "DSA/Time/space complexity.md",
     "DSA/Time",
-    "Untitled.md",
     "DSA/Problems",
     "DSA/Patterns",
     "Interview Prep",
