@@ -25,3 +25,19 @@ MongoDB is a **NoSQL ==document== database**. Data is stored as **JSON documents
 ```
 ✅ No migrations needed when requirements change, just add fields. 
 ❌ Data consistency has to be enforced at the application layer.
+
+2. Embedded Documents
+Related data can be nested directly inside a document, no JOIN needed
+```js
+{ 
+	_id: ObjectId("..."), 
+	text: "hello", 
+	reactions: [ 
+		{ userId: "user_1", emoji: "👍" }, 
+		{ userId: "user_2", emoji: "❤️" } 
+	] 
+}
+```
+
+✅ One query gets everything you need. 
+❌ Documents can get large if embedded data grows, which hurts performance.
