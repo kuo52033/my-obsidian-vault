@@ -61,3 +61,19 @@ Primary ── write ──> Secondary 1
 Primary goes down → Secondary auto-elected as new Primary
 ```
 ✅ High availability with automatic failover.
+
+---
+
+### Trade-offs
+
+✅ Good fit for MongoDB
+- Data structure is flexible or changes frequently 
+- Data is naturally nested (messages, comments, notifications) 
+- Rapid development, no migrations 
+- ==Read-heavy== workloads with simple query patterns
+
+❌ Bad fit for MongoDB
+- Complex multi-table JOINs
+- Strong consistency requirements (e.g. financial transactions) 
+- Highly relational data with many foreign keys 
+- Full ACID guarantees needed
