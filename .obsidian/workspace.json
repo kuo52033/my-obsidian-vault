@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "eebb21bada323e84",
+        "id": "fdad8fa67cb5416b",
         "type": "tabs",
         "children": [
           {
-            "id": "ed2f6b3d40974ce0",
+            "id": "8e6db6623327f444",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -184,9 +184,9 @@
       "bases:建立新的 base": false
     }
   },
-  "active": "ed2f6b3d40974ce0",
+  "active": "8e6db6623327f444",
   "lastOpenFiles": [
-    "新增 文字文件.txt",
-    "test.md"
+    "test.md",
+    "新增 文字文件.txt"
   ]
 }
