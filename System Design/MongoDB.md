@@ -51,3 +51,13 @@ Collection: messages
 └── Shard 3 ── overflow
 ```
 ✅ Scale out by adding machines, not upgrading to a bigger one.
+
+4. Replica Set
+Data is automatically synced across multiple nodes
+```bash
+Primary ── write ──> Secondary 1 
+		──────────> Secondary 2
+		
+Primary goes down → Secondary auto-elected as new Primary
+```
+✅ High availability with automatic failover.
