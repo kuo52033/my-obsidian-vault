@@ -42,6 +42,8 @@ Related data can be nested directly inside a document, no JOIN needed
 ✅ One query gets everything you need. 
 ❌ Documents can get large if embedded data grows, which hurts performance.
 
+較適合不常改的 document
+
 3. Horizontal Scaling (Sharding)
 MongoDB natively supports distributing data across multiple machines: 
 ```bash
