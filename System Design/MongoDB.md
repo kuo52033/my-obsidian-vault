@@ -26,6 +26,8 @@ MongoDB is a **NoSQL ==document== database**. Data is stored as **JSON documents
 ✅ No migrations needed when requirements change, just add fields. 
 ❌ Data consistency has to be enforced at the application layer.
 
+使用像 Mongoose 的 library 建立 schema，只是在應用層裡定義，MongoDB 不知道它的存在，因此用 shell 直接寫入不符合 schema 的資料，是擋不住的。 但像 Sequelize 這類的 SQL ORM 是會動到資料庫層的 ( await sequelize.sync() )
+
 2. Embedded Documents
 Related data can be nested directly inside a document, no JOIN needed
 ```js
