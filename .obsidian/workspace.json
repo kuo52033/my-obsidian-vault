@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/CS (Custom Service)/Capacity Estimation.md",
+                "file": "Infra/CS (Custom Service)/High level Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capacity Estimation"
+              "title": "High level Architecture"
             }
           }
         ],
@@ -213,9 +213,10 @@
   },
   "active": "9e49a8437d7c7c09",
   "lastOpenFiles": [
-    "Infra/CS (Custom Service)/Technology.md",
-    "Infra/CS (Custom Service)/Requirements.md",
     "Infra/CS (Custom Service)/Capacity Estimation.md",
+    "Infra/CS (Custom Service)/High level Architecture.md",
+    "Infra/CS (Custom Service)/Requirements.md",
+    "Infra/CS (Custom Service)/Technology.md",
     "Infra/CS (Custom Service).md",
     "Infra/CS (Custom Service)/technology",
     "Infra/CS (Custom Service)",
@@ -243,7 +244,6 @@
     "DSA/Patterns/2D DP.md",
     "DSA/time and space complexity.md",
     "DSA/Complexity",
-    "DSA/Time/space complexity.md",
     "DSA/Time",
     "DSA/Problems",
     "DSA/Patterns",
