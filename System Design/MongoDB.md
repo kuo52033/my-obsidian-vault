@@ -1,4 +1,4 @@
-MongoDB is a **NoSQL document database**. Data is stored as **JSON documents** instead of table rows.
+MongoDB is a **NoSQL ==document== database**. Data is stored as **JSON documents** instead of table rows.
 ```js
 {
   _id: ObjectId("..."),
@@ -17,3 +17,11 @@ MongoDB is a **NoSQL document database**. Data is stored as **JSON documents** i
 
 ### Core Features
 1. Schema-less
+	No need to define fields upfront. Each document in the same collection can have a different structure
+```js
+// Both can exist in the same collection
+{ _id: 1, text: "hello" }
+{ _id: 2, text: "hi", image: "url...", reactions: ["👍"] }
+```
+✅ No migrations needed when requirements change, just add fields. 
+❌ Data consistency has to be enforced at the application layer.
