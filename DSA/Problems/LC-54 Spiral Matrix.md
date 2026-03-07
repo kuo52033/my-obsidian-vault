@@ -127,5 +127,4 @@ Spiral Matrix 四個方向走完後各縮哪個邊界 :: 右→top++ / 下→rig
 ---
 
 ## 相關題目
-
-- [[LC-59-Spiral-Matrix-II]] ← 反過來，填入螺旋順序的數字
+b
