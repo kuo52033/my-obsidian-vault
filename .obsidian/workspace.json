@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b0e95de878ccb49a",
+        "id": "edcbec7adc518531",
         "type": "tabs",
         "children": [
           {
-            "id": "6ed5a0ff1605edec",
+            "id": "c0e93022abb59cb2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "System Design/BullMQ.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "BullMQ"
             }
           }
         ]
@@ -194,11 +198,11 @@
   },
   "active": "7a49757e6152e442",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "System Design/Redis Stream & Redis List.md",
+    "System Design/Websocket.md",
+    "conflict-files-obsidian-git.md",
     "System Design/BullMQ.md",
     "Infra/CS (Custom Service).md",
-    "System Design/Websocket.md",
     "System Design/Redis sub&pub.md",
     "System Design",
     "Infra",
