@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "964d279c2a2c40a5",
+        "id": "b0e95de878ccb49a",
         "type": "tabs",
         "children": [
           {
-            "id": "cbfbed806eecc6f8",
+            "id": "6ed5a0ff1605edec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "System Design/Redis Stream & Redis List.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Redis Stream & Redis List"
-            }
-          },
-          {
-            "id": "9e49a8437d7c7c09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DSA/Problems/LC-56 Merge Intervals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LC-56 Merge Intervals"
+              "title": "新分頁"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "檔案瀏覽器"
             }
           },
           {
@@ -76,7 +57,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜尋"
             }
           },
           {
@@ -181,13 +162,13 @@
             }
           },
           {
-            "id": "75cf2c5779792cda",
+            "id": "7a49757e6152e442",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
               "state": {},
               "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "title": "筆記復習序列"
             }
           }
         ],
@@ -200,47 +181,41 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
+      "obsidian-spaced-repetition:復習卡片": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "bases:建立新的 base": false
     }
   },
-  "active": "9e49a8437d7c7c09",
+  "active": "7a49757e6152e442",
   "lastOpenFiles": [
-    "DSA/Problems/LC-57 Insert Interval.md",
-    "DSA/Problems/LC-56 Merge Intervals.md",
-    "LC-57-Insert-Interval.md",
-    "DSA/Patterns/Interval Pattern.md",
+    "conflict-files-obsidian-git.md",
     "System Design/Redis Stream & Redis List.md",
     "System Design/BullMQ.md",
-    "System Design/Redis sub&pub.md",
-    "Redis Stream.md",
-    "System Design/Websocket.md",
-    "DSA/Basic/Double Link List.md",
-    "Untitled",
     "Infra/CS (Custom Service).md",
-    "DSA/Complexity/time and space complexity.md",
-    "DSA/Basic/Array.md",
+    "System Design/Websocket.md",
+    "System Design/Redis sub&pub.md",
+    "System Design",
+    "Infra",
     "DSA/Problems/LC-62 Unique Paths.md",
-    "DSA/Basic",
+    "DSA/Problems/LC-57 Insert Interval.md",
+    "DSA/Problems/LC-56 Merge Intervals.md",
+    "DSA/Patterns/Interval Pattern.md",
     "DSA/Patterns/2D DP.md",
-    "DSA/time and space complexity.md",
-    "DSA/Complexity",
-    "DSA/Time/space complexity.md",
-    "DSA/Time",
-    "Untitled.md",
+    "DSA/Complexity/time and space complexity.md",
+    "DSA/Basic/Double Link List.md",
+    "DSA/Basic/Array.md",
     "DSA/Problems",
     "DSA/Patterns",
+    "DSA/Complexity",
+    "DSA/Basic",
+    "DSA",
     "test.md",
-    "Interview Prep",
-    "Infra",
-    "Language",
-    "System Design"
+    "新增 文字文件.txt"
   ]
 }
