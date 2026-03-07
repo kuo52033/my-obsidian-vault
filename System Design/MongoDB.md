@@ -41,3 +41,13 @@ Related data can be nested directly inside a document, no JOIN needed
 
 ✅ One query gets everything you need. 
 ❌ Documents can get large if embedded data grows, which hurts performance.
+
+3. Horizontal Scaling (Sharding)
+MongoDB natively supports distributing data across multiple machines: 
+```bash
+Collection: messages 
+├── Shard 1 ── roomId: A-M 
+├── Shard 2 ── roomId: N-Z 
+└── Shard 3 ── overflow
+```
+✅ Scale out by adding machines, not upgrading to a bigger one.
