@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "edcbec7adc518531",
+        "id": "bb7e263a85c58f1e",
         "type": "tabs",
         "children": [
           {
-            "id": "c0e93022abb59cb2",
+            "id": "8c8eb349f9139241",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/BullMQ.md",
+                "file": "DSA/Problems/LC-54 Spiral Matrix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BullMQ"
+              "title": "LC-54 Spiral Matrix"
+            }
+          },
+          {
+            "id": "16aa46598f11c8be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DSA/Problems/LC-54 Spiral Matrix.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LC-54 Spiral Matrix"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,10 +211,14 @@
       "bases:建立新的 base": false
     }
   },
-  "active": "7a49757e6152e442",
+  "active": "16aa46598f11c8be",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "DSA/Patterns/Matrix Simulation Pattern.md",
+    "DSA/Patterns/2D DP.md",
+    "DSA/Patterns/Interval Pattern.md",
+    "DSA/Problems/LC-54 Spiral Matrix.md",
     "System Design/BullMQ.md",
+    "conflict-files-obsidian-git.md",
     "System Design/Redis Stream & Redis List.md",
     "System Design/Websocket.md",
     "Infra/CS (Custom Service).md",
@@ -209,8 +228,6 @@
     "DSA/Problems/LC-62 Unique Paths.md",
     "DSA/Problems/LC-57 Insert Interval.md",
     "DSA/Problems/LC-56 Merge Intervals.md",
-    "DSA/Patterns/Interval Pattern.md",
-    "DSA/Patterns/2D DP.md",
     "DSA/Complexity/time and space complexity.md",
     "DSA/Basic/Double Link List.md",
     "DSA/Basic/Array.md",
