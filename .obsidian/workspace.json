@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Problems/LC-50 Pow(x, n).md",
+                "file": "DSA/Problems/LC-49 Group Anagrams.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LC-50 Pow(x, n)"
+              "title": "LC-49 Group Anagrams"
             }
           }
         ],
@@ -227,8 +227,12 @@
   },
   "active": "28b327b0fe9789ed",
   "lastOpenFiles": [
-    "DSA/Patterns/Divide and Conquer.md",
+    "DSA/Basic/HashMap.md",
+    "DSA/Basic/Array.md",
+    "DSA/Basic/Double Link List.md",
+    "DSA/Problems/LC-49 Group Anagrams.md",
     "DSA/Problems/LC-50 Pow(x, n).md",
+    "DSA/Patterns/Divide and Conquer.md",
     "DSA/Patterns/Interval.md",
     "DSA/Patterns/Matrix Simulation.md",
     "Infra/CS (Custom Service)/Deep Dive.md",
@@ -251,11 +255,7 @@
     "System Design/Redis sub&pub.md",
     "Redis Stream.md",
     "System Design/Websocket.md",
-    "DSA/Basic/Double Link List.md",
     "Untitled",
-    "DSA/Complexity/time and space complexity.md",
-    "DSA/Basic/Array.md",
-    "DSA/Problems/LC-62 Unique Paths.md",
     "DSA/Basic",
     "DSA/Complexity",
     "DSA/Time",
