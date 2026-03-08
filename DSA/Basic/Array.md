@@ -88,7 +88,7 @@ idx = bisect.bisect_left(arr, target)
 
 ---
 
-### 5. Hash Map / Hash Set
+### 5. [[HashMap]] / Hash Set
 
 Trade space for O(1) lookups. Extremely common in array problems.
 
