@@ -7,6 +7,13 @@ key → hash function → index → value
 "eat" → hash() → 42 → "found"
 ```
 
+> [!NOTE]  **associative array**
+> **Abstract Data Type (ADT)** 是一個概念，只定義「能做什麼操作」，不管底層怎麼實作。
+> Associative Array 這個 ADT 定義很簡單：
+> - `set(key, value)` － 存一個值
+> - `get(key)` → value － 用 key 取值
+>   `delete(key)` － 刪除
+
 ### Time complexity
 
 | op     | average | worst case |
