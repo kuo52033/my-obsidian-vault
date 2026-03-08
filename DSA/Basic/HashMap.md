@@ -16,6 +16,11 @@ key → hash function → index → value
 | Delete | O(1)    | O(n)       |
 Worst case 發生在 **hash collision**（多個 key 被分配到同一個 index）。
 
+- 線性搜尋：不用額外空間，但每次查找 O(n)
+- HashMap：先花 O(n) space 把資料都 hash 進去，之後每次查找 O(1)
+
+==**用空間換時間**==
+
 ---
 
 ### Python 用法
