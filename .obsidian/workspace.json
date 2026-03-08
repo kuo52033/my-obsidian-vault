@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Problems/LC-49 Group Anagrams.md",
+                "file": "DSA/Basic/HashMap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LC-49 Group Anagrams"
+              "title": "HashMap"
             }
           }
         ],
@@ -227,9 +227,10 @@
   },
   "active": "28b327b0fe9789ed",
   "lastOpenFiles": [
-    "DSA/Basic/HashMap.md",
-    "DSA/Basic/Array.md",
     "DSA/Basic/Double Link List.md",
+    "DSA/Basic/Array.md",
+    "DSA/Basic/HashMap.md",
+    "DSA/Complexity/time and space complexity.md",
     "DSA/Problems/LC-49 Group Anagrams.md",
     "DSA/Problems/LC-50 Pow(x, n).md",
     "DSA/Patterns/Divide and Conquer.md",
@@ -254,7 +255,6 @@
     "System Design/Redis Stream & Redis List.md",
     "System Design/Redis sub&pub.md",
     "Redis Stream.md",
-    "System Design/Websocket.md",
     "Untitled",
     "DSA/Basic",
     "DSA/Complexity",
