@@ -65,3 +65,32 @@ for s in strs:
 - 需要**記憶化**遞迴結果
 ---
 ### Hash Collision
+
+Hash function 把 key 轉成 index，但陣列大小有限，有時候**兩個不同的 key 會被分配到同一個 index**，這就是 collision。
+```
+"eat"  → hash() → index 3
+"listen" → hash() → index 3  ← collision！
+```
+
+解決方法
+方法一 Chaining（串鏈）
+同一個 index 用 linked list 把所有衝突的 key 串起來：
+
+```
+index 3 → ["eat" → "listen" → null]
+index 5 → ["hello" → null]
+```
+
+查找時先找到 index，再走 linked list 找正確的 key。 最壞情況所有 key 都塞在同一個 index → ==退化成 O(n)==。
+
+方法二 Open Addressing（開放定址）
+碰到 collision 就往後找下一個空位：
+
+```
+想放 index 3，但 3 已經有人了
+→ 試 index 4，空的 → 放這裡
+```
+
+查找時也是從原本的 index 開始，往後找直到找到或空位為止。
+
+**Python 的 dict 用這個方法。**
