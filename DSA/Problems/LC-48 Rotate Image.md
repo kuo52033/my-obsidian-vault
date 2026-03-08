@@ -2,6 +2,7 @@
 tags:
   - matrix
   - math
+  - flashcards
 ---
 
 ## 題目理解
