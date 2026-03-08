@@ -106,3 +106,16 @@ index 5 → ["hello" → null]
 查找時也是從原本的 index 開始，往後找直到找到或空位為止。
 
 **Python 的 dict 用這個方法。**
+
+---
+
+底層是一個陣列，陣列根據不同語言會自動擴張, 陣列裡存的是 key-value pair，處理 collision 時需要判斷
+```
+index 0: None
+index 1: None
+index 2: ("name", "Alice")   ← key 和 value 都存
+index 3: None
+index 4: ("age", 25)
+index 5: None
+index 6: ("eat", True)
+```
