@@ -99,6 +99,3 @@ index 5 → ["hello" → null]
 查找時也是從原本的 index 開始，往後找直到找到或空位為止。
 
 **Python 的 dict 用這個方法。**
-
----
-
