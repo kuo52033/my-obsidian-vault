@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/Redis Stream & Redis List.md",
+                "file": "Infra/CS (Custom Service)/Deep Dive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redis Stream & Redis List"
+              "title": "Deep Dive"
             }
           }
         ]
@@ -198,6 +198,7 @@
   },
   "active": "5e69aa82b6799fc9",
   "lastOpenFiles": [
+    "System Design/Redis Stream & Redis List.md",
     "System Design/BullMQ.md",
     "Infra/CS (Custom Service)/Deep Dive.md",
     "Infra/CS (Custom Service)/Capacity Estimation.md",
@@ -222,7 +223,6 @@
     "DSA/Patterns/Kadane's Algorithm.md",
     "DSA/Patterns/2D DP.md",
     "DSA/Patterns/Interval Pattern.md",
-    "System Design/Redis Stream & Redis List.md",
     "System Design/Websocket.md",
     "Infra/CS (Custom Service).md",
     "System Design/Redis sub&pub.md",

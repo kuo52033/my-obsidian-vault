@@ -13,4 +13,6 @@
 - [[Redis sub&pub]]
 	- Why: 跨 server instance 廣播訊息 , 最簡單，複雜度不需要到 kafka
 	- Trade-off: Fire and forget，訊息可能遺失 
-	- 解法: MongoDB 持久化，斷線後用 HTTP 補讀
+	- 解法: 
+		- MongoDB 持久化，斷線後用 HTTP 補讀
+		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失
