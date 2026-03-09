@@ -198,9 +198,9 @@
   },
   "active": "5e69aa82b6799fc9",
   "lastOpenFiles": [
-    "System Design/Redis Stream & Redis List.md",
     "System Design/BullMQ.md",
     "Infra/CS (Custom Service)/Deep Dive.md",
+    "System Design/Redis Stream & Redis List.md",
     "Infra/CS (Custom Service)/Capacity Estimation.md",
     "conflict-files-obsidian-git.md",
     "DSA/Problems/LC-53 Maximum Subarray.md",
