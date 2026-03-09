@@ -15,4 +15,4 @@
 	- Trade-off: Fire and forget，訊息可能遺失 
 	- 解法: 
 		- MongoDB 持久化，斷線後用 HTTP 補讀
-		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失
+		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失、ACK 機制、offset 補讀
