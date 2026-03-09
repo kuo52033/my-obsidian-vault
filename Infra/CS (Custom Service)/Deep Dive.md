@@ -6,7 +6,7 @@
 	- Why: AI 回覆需要 3-10 秒，不能阻塞主流程 
 	- Trade-off: 增加系統複雜度，需要監控 job 狀態 
 	- Retry: exponential backoff，最多 3 次
-	- 如果系統成長到需要多個服務消費同一個事件，可以考慮遷移至 SQS 或 kafka
+	- 如果系統成長到需要多個服務消費同一個事件，因為 bullmq 只能最多讓一個 worker 消費，可以考慮遷移至 SQS 或 kafka
 - [[MongoDB]]
 	- Why: 訊息結構彈性，schema 可能隨需求變動
 	- 用途: 持久化訊息記錄，斷線補讀 
