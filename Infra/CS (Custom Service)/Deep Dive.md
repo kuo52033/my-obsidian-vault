@@ -15,4 +15,4 @@
 	- Trade-off: Fire and forget，訊息可能遺失 
 	- 解法: 
 		- MongoDB 持久化，斷線後用 HTTP 補讀
-		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失、ACK 機制、offset 補讀
+		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失、ACK 機制、offset 補讀，用 Redis Stream 存最近 N 筆作為 cache，冷啟動和斷線補讀優先從 Stream 讀，速度快。完整歷史記錄還是存在 MongoDB，用戶往上滾動時才觸發 MongoDB 查詢，這樣可以平衡效能和成本。
