@@ -11,6 +11,7 @@
 	- Why: 訊息結構彈性，schema 可能隨需求變動
 	- 用途: 持久化訊息記錄，斷線補讀 
 	- Trade-off: 不適合複雜關聯查詢
+	- NoSQL 的核心優勢是「彈性」——schema 彈性、擴展彈性、開發彈性。代價是把很多 SQL 幫你處理的事（一致性、關聯、型別）丟回給應用層自己負責。
 - [[Redis sub&pub]]
 	- Why: 跨 server instance 廣播訊息 , 最簡單，複雜度不需要到 kafka
 	- Trade-off: Fire and forget，訊息可能遺失 
