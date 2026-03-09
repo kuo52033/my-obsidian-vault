@@ -22,7 +22,7 @@ tags:
 
 ## 解題框架
 
-用 **[[Interval Pattern]]**
+用 **[[Interval]]**
 
 ```
 sort by 起點

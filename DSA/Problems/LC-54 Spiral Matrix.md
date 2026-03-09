@@ -27,7 +27,7 @@ tags:
 
 ## 解題框架
 
-用 **[[Matrix Simulation Pattern]]**
+用 **[[Matrix Simulation]]**
 
 ```
 while top <= bottom and left <= right:

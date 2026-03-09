@@ -1,0 +1,16 @@
+- [[Websocket]]
+	- Why: 需要雙向即時通訊，HTTP polling 延遲太高 
+	- Auth: HTTP upgrade 階段用 passport session 驗證 
+	- Trade-off: 連線是 stateful，需要 Redis Pub/Sub 解決跨 instance 問題
+- [[BullMQ]]
+	- Why: AI 回覆需要 3-10 秒，不能阻塞主流程 
+	- Trade-off: 增加系統複雜度，需要監控 job 狀態 
+	- Retry: exponential backoff，最多 3 次
+- [[MongoDB]]
+	- Why: 訊息結構彈性，schema 可能隨需求變動
+	- 用途: 持久化訊息記錄，斷線補讀 
+	- Trade-off: 不適合複雜關聯查詢
+- [[Redis sub&pub]]
+	- Why: 跨 server instance 廣播訊息 
+	- Trade-off: Fire and forget，訊息可能遺失 
+	- 解法: MongoDB 持久化，斷線後用 HTTP 補讀

@@ -26,7 +26,7 @@ tags:
 
 ## 解題框架
 
-用 **[[Interval Pattern]]**
+用 **[[Interval]]**
 
 三段式掃描，用 index 推進，不需要回頭：
 
