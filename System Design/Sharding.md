@@ -77,7 +77,7 @@ Adding Node D (position 250):
 - Distributes load more evenly (law of large numbers)
 - When a node fails, its virtual segments transfer to different nodes — avoids overloading a single neighbour
 
-Used by: **Cassandra, DynamoDB**
+Used by: ==**Cassandra, DynamoDB**==
 
 ---
 
