@@ -16,11 +16,11 @@ With Sharding:
 
 ## Why Sharding
 
-|Problem|Solution|
-|---|---|
-|Single machine storage limit|Distribute data across machines|
-|Single machine query bottleneck|Queries go to specific shard only|
-|Single point of failure|Each shard can have its own replica|
+| Problem                         | Solution                            |
+| ------------------------------- | ----------------------------------- |
+| Single machine storage limit    | Distribute data across machines     |
+| Single machine query bottleneck | Queries go to specific shard only   |
+| Single point of failure         | Each shard can have its own replica |
 
 ---
 
