@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/Problems/LC-46 Permutations.md",
+                "file": "Infra/CS (Custom Service)/Deep Dive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LC-46 Permutations"
+              "title": "Deep Dive"
             }
           }
         ],
@@ -225,10 +225,13 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "28b327b0fe9789ed",
+  "active": "75cf2c5779792cda",
   "lastOpenFiles": [
-    "DSA/Problems/LC-48 Rotate Image.md",
+    "System Design/BullMQ.md",
+    "Infra/CS (Custom Service)/Deep Dive.md",
+    "Infra/CS (Custom Service)/Capacity Estimation.md",
     "DSA/Problems/LC-46 Permutations.md",
+    "DSA/Problems/LC-48 Rotate Image.md",
     "DSA/Basic/Array.md",
     "DSA/Basic/HashMap.md",
     "DSA/Basic/Double Link List.md",
@@ -238,15 +241,12 @@
     "DSA/Patterns/Divide and Conquer.md",
     "DSA/Patterns/Interval.md",
     "DSA/Patterns/Matrix Simulation.md",
-    "Infra/CS (Custom Service)/Deep Dive.md",
     "Infra/CS (Custom Service)/High level Architecture.md",
-    "Infra/CS (Custom Service)/Capacity Estimation.md",
     "Infra/CS (Custom Service)/Requirements.md",
     "Infra/CS (Custom Service).md",
     "Infra/CS (Custom Service)/technology",
     "Infra/CS (Custom Service)",
     "System Design/MongoDB.md",
-    "System Design/BullMQ.md",
     "DSA/Patterns/Kadane's Algorithm.md",
     "DSA/Problems/LC-53 Maximum Subarray.md",
     "DSA/Problems/LC-56 Merge Intervals.md",
