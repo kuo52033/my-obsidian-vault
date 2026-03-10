@@ -50,7 +50,7 @@ Related data can be nested directly inside a document, no JOIN needed
 MongoDB natively supports distributing data across multiple machines: 
 ```bash
 Collection: messages 
-├── Shard 1 ── roomId: A-M 
+├── Shard 1 ── roomId: A-M （Primary Shard）
 ├── Shard 2 ── roomId: N-Z 
 └── Shard 3 ── overflow
 ```

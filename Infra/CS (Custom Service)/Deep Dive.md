@@ -6,11 +6,15 @@
 	- Why: AI 回覆需要 3-10 秒，不能阻塞主流程 
 	- Trade-off: 增加系統複雜度，需要監控 job 狀態 
 	- Retry: exponential backoff，最多 3 次
+	- 如果系統成長到需要多個服務消費同一個事件，因為 bullmq 只能最多讓一個 worker 消費，可以考慮遷移至 SQS 或 kafka
 - [[MongoDB]]
 	- Why: 訊息結構彈性，schema 可能隨需求變動
 	- 用途: 持久化訊息記錄，斷線補讀 
 	- Trade-off: 不適合複雜關聯查詢
+	- NoSQL 的核心優勢是「彈性」——schema 彈性、擴展彈性、開發彈性。代價是把很多 SQL 幫你處理的事（一致性、關聯、型別）丟回給應用層自己負責。
 - [[Redis sub&pub]]
-	- Why: 跨 server instance 廣播訊息 
+	- Why: 跨 server instance 廣播訊息 , 最簡單，複雜度不需要到 kafka
 	- Trade-off: Fire and forget，訊息可能遺失 
-	- 解法: MongoDB 持久化，斷線後用 HTTP 補讀
+	- 解法: 
+		- MongoDB 持久化，斷線後用 HTTP 補讀
+		- 或升級至 [[Redis Stream & Redis List|Redis Stream]]，訊息不會遺失、ACK 機制、offset 補讀，用 Redis Stream 存最近 N 筆作為 cache，冷啟動和斷線補讀優先從 Stream 讀，速度快。完整歷史記錄還是存在 MongoDB，用戶往上滾動時才觸發 MongoDB 查詢，這樣可以平衡效能和成本。
