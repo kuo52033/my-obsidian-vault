@@ -23,4 +23,4 @@
 ---
 
 - 你們的 WebSocket 連線有做 Authentication，可以說說如果沒有在 HTTP Upgrade 階段做驗證，改成連線建立後再驗證，會有什麼問題？你們為什麼選擇在 Upgrade 階段做？
-	- 
+	- 如果升級成 websocket 再做驗證，會多一次的訊息交換，驗證失敗再發 close frame 關閉連線，在此之前 TCP 已經連線、websocket 握手完成，server 記憶體已分配，浪費資源。再來是安全性，如果有惡意用戶建立大量的未驗證 websocket 連線，每個都占用server 記憶體，容易被用來做 DDOS，因此我們選擇在 upgrade 階段就做身分驗證，失敗直接拒絕 TCP 層，再來是因為 upgrade 階段還是 HTTP，可以用 HTTP middleware、讀取 cookie、header，升級後這些工具就無法用了
