@@ -231,4 +231,3 @@ From simplest to most complex:
 
 - [[MongoDB]] — Embedded documents vs References, $lookup limitations
 - [[Redis]] — Caching strategy, Cache invalidation
-- [[System Design 通用框架]] — Capacity estimation, scaling decisions
