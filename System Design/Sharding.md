@@ -353,13 +353,13 @@ But DB auto-increment requires a DB connection → no ID before connecting → c
 
 ## 9. SQL vs NoSQL Sharding
 
-||SQL (MySQL)|MongoDB|Cassandra / DynamoDB|
-|---|---|---|---|
-|Sharding|Manual (application layer)|Automatic (Mongos)|Automatic (built-in)|
-|Cross-shard JOIN|Must do in application layer|$lookup limited|Design to avoid|
-|Routing logic|In your code|Mongos handles it|Driver handles it|
-|Schema design|Flexible|Flexible|Must match query pattern upfront|
-|Rebalancing|Painful|Automatic|Automatic|
+|                  | SQL (MySQL)                  | MongoDB            | Cassandra / DynamoDB             |
+| ---------------- | ---------------------------- | ------------------ | -------------------------------- |
+| Sharding         | Manual (application layer)   | Automatic (Mongos) | Automatic (built-in)             |
+| Cross-shard JOIN | Must do in application layer | $lookup limited    | Design to avoid                  |
+| Routing logic    | In your code                 | Mongos handles it  | Driver handles it                |
+| Schema design    | Flexible                     | Flexible           | Must match query pattern upfront |
+| Rebalancing      | Painful                      | Automatic          | Automatic                        |
 
 ---
 
@@ -454,4 +454,3 @@ Use **Elasticsearch** for full-text search and **Analytics DB / Data Warehouse**
 - [[MongoDB]] — Embedded documents vs References, $lookup limitations
 - [[Redis]] — Caching strategy, Cache invalidation
 - [[Cassandra]] — Partition key design, clustering key, denormalization
-- [[System Design 通用框架]] — Capacity estimation, scaling decisions
