@@ -38,7 +38,8 @@ A-M → Shard 1
 N-Z → Shard 2
 ```
 
-✅ Efficient for range queries ❌ Uneven distribution, easy to create hot shards
+✅ Efficient for range queries 
+❌ Uneven distribution, easy to create hot shards
 
 ---
 
@@ -48,7 +49,8 @@ N-Z → Shard 2
 Shard = Hash(key) % N
 ```
 
-✅ Even distribution ❌ Adding/removing nodes causes massive rehashing — almost all keys change their shard mapping
+✅ Even distribution 
+❌ Adding/removing nodes causes massive rehashing — almost all keys change their shard mapping
 
 ---
 
