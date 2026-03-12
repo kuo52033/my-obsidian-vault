@@ -7,7 +7,7 @@ Serializable
 ```
 ### 要解決的問題
 
- - Dirty Read 髒讀
+ - Dirty Read 髒讀，讀到尚未 commit 的資料
 	```
 	Transaction A 修改了資料但還沒 commit
 	Transaction B 讀到了 A 還沒 commit 的資料
