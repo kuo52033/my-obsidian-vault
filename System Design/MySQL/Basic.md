@@ -28,7 +28,7 @@ I - [[Isolation]] 隔離性
 就像每個 transaction 都是獨立執行的一樣。
 ```
 
-D - Durability 持久性
+D - [[Durability]] 持久性
 ```bash
 Transaction commit 之後，資料永久寫入。
 即使系統 crash、斷電，資料也不會消失。
