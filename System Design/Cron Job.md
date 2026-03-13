@@ -355,7 +355,7 @@ Scheduler 1 crashes mid-execution
 
 ## Trade-offs
 
-||Pros|Cons|
+| |Pros|Cons|
 |---|---|---|
 |EventEmitter|Lightweight, no extra infrastructure, clear layer separation|In-process only, no persistence across crashes|
 |p-limit(1) serial|Safe, clear error boundaries, no Deadlock risk|Slower than parallel|
