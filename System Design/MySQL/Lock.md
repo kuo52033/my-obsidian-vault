@@ -264,19 +264,6 @@ Query WITHOUT index:
 → Massive contention
 ```
 
-Practical implication for MS project:
-
-```
-Scheduler UPDATE without proper index:
-→ Locks entire transaction_logs table
-→ All other schedulers blocked
-→ Settlement time explodes
-
-Fix: ensure WHERE clause uses indexed columns
-→ Locks shrink to Record Lock
-→ Schedulers run concurrently
-```
-
 ---
 
 ## 5. Deadlock
