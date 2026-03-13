@@ -339,4 +339,4 @@ MVCC
 - [[ACID]] — Atomicity, Consistency, Isolation, Durability
 - [[Transaction]] — How to use transactions in Sequelize
 - [[Isolation Levels]] — Read Uncommitted, Read Committed, Repeatable Read, Serializable
--  [[Locking]] — Row locks, Gap locks, Next-Key locks
+-  [[Lock]] — Row locks, Gap locks, Next-Key locks
