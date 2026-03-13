@@ -336,8 +336,7 @@ MVCC
 
 ## Related Topics
 
-- [[MySQL ACID]] — Atomicity, Consistency, Isolation, Durability
-- [[MySQL Transaction]] — How to use transactions in Sequelize
-- [[MySQL Isolation Levels]] — Read Uncommitted, Read Committed, Repeatable Read, Serializable
-- [[MySQL Locking]] — Row locks, Gap locks, Next-Key locks
-- [[MS Project]] — Financial system, why current read is critical for balance operations
+- [[ACID]] — Atomicity, Consistency, Isolation, Durability
+- [[Transaction]] — How to use transactions in Sequelize
+- [[Isolation Levels]] — Read Uncommitted, Read Committed, Repeatable Read, Serializable
+-  [[Locking]] — Row locks, Gap locks, Next-Key locks

@@ -1,4 +1,4 @@
-### ACID
+
 
 **A- Atomicity 原子性**
 ```bash
@@ -22,7 +22,7 @@ A 帳戶只有 500，卻要轉 1000
 → 違反 Consistency，資料庫拒絕這個 transaction
 ```
 
-I - [[Isolation]] 隔離性
+I - [[Isolation levels]] 隔離性
 ```
 多個 transaction 同時執行，互相不干擾。
 就像每個 transaction 都是獨立執行的一樣。
