@@ -405,7 +405,6 @@ Kafka / SQS (distributed, durable, scalable)
 
 ## Related Topics
 
-- [[MySQL Lock]] — Deadlock prevention in serial settlement
+- [[Lock]] — Deadlock prevention in serial settlement
 - [[Redis]] — Distributed lock, SET NX atomicity
-- [[MS Project]] — Daily settlement flow, report generation
 - [[Idempotency]] — Ensuring re-runs produce correct results
