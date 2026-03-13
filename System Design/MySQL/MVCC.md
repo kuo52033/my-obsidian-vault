@@ -64,8 +64,8 @@ Row in table:
 └─────────────┴──────────────┴──────────────┴──────────┘
                                                   ↓
                                           balance=500 (old version)
-                                          DB_TRX_ID=30
-                                          DB_ROLL_PTR──→ even older version...
+                                            DB_TRX_ID=30
+                                DB_ROLL_PTR──→ even older version...
 ```
 
 ### Undo Log — The Version Chain
