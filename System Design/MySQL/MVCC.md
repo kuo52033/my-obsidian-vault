@@ -219,22 +219,22 @@ Result: Same query always returns the same result within the transaction → **N
 
 ### Comparison
 
-||Read Committed|Repeatable Read|
-|---|---|---|
-|Read View creation|Every SELECT|Once at first SELECT|
-|Sees other committed changes|✅ Yes|❌ No (after snapshot)|
-|Non-Repeatable Read|❌ Possible|✅ Prevented|
-|Phantom Read|❌ Possible|✅ Mostly prevented (MVCC + Gap Lock)|
+|                              | Read Committed | Repeatable Read                      |
+| ---------------------------- | -------------- | ------------------------------------ |
+| Read View creation           | Every SELECT   | Once at first SELECT                 |
+| Sees other committed changes | ✅ Yes          | ❌ No (after snapshot)                |
+| Non-Repeatable Read          | ❌ Possible     | ✅ Prevented                          |
+| Phantom Read                 | ❌ Possible     | ✅ Mostly prevented (MVCC + Gap Lock) |
 
 ---
 
 ## MVCC vs Locking — Optimistic vs Pessimistic
 
-||Approach|Description|
-|---|---|---|
-|MVCC Snapshot Read|Optimistic-like|No locks, assume no conflict, read old version|
-|MVCC Current Read (FOR UPDATE)|Pessimistic|Lock the row, prevent others from modifying|
-|Traditional locking|Pessimistic|Lock before read, others must wait|
+|                                | Approach        | Description                                    |
+| ------------------------------ | --------------- | ---------------------------------------------- |
+| MVCC Snapshot Read             | Optimistic-like | No locks, assume no conflict, read old version |
+| MVCC Current Read (FOR UPDATE) | Pessimistic     | Lock the row, prevent others from modifying    |
+| Traditional locking            | Pessimistic     | Lock before read, others must wait             |
 
 > **MVCC snapshot read is conceptually close to optimistic locking — it assumes conflicts are rare and avoids locking. But MVCC itself is a mechanism, not strictly equivalent to optimistic locking.**
 
@@ -244,7 +244,7 @@ Result: Same query always returns the same result within the transaction → **N
 
 Repeatable Read + MVCC prevents most phantom reads for **snapshot reads**.
 
-But for **current reads**, phantom reads can still occur:
+==But for **current reads**, phantom reads can still occur:==
 
 ```
 Transaction A: SELECT FOR UPDATE WHERE amount > 100 → finds 3 rows, locks them
