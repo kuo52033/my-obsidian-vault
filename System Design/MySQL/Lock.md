@@ -123,7 +123,7 @@ MySQL Repeatable Read uses Next-Key Lock by default for range queries:
 SELECT * FROM accounts WHERE id > 20 AND id < 40 FOR UPDATE;
 ```
 
-**Why Next-Key Lock prevents Phantom Read:**
+**Why Next-Key Lock prevents Phantom Read**
 
 ```
 Transaction A:
