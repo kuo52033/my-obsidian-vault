@@ -270,7 +270,7 @@ const isTimestampValid = (timestamp) => {
 
 ### HMAC vs Digital Signature (RSA/ECC)
 
-||HMAC-SHA256|RSA/ECC Signature|
+| |HMAC-SHA256|RSA/ECC Signature|
 |---|---|---|
 |Key type|Symmetric (both parties share same key)|Asymmetric (private key signs, public key verifies)|
 |Speed|Very fast|Slow|
@@ -365,7 +365,7 @@ Correct answer: 1300, actual: 1200 → 100 lost 💥
 
 **Serial execution (p-limit(1)):** transactions for the same bank processed one at a time.
 
-See [[CronJob_PM2_Orchestration]] for distributed lock implementation details.
+See [[Cron Job]] for distributed lock implementation details.
 
 ---
 
@@ -438,7 +438,6 @@ Allow ±5 minute window to account for clock differences between systems. Too ti
 
 ## Related Topics
 
-- [[MySQL Lock]] — SELECT FOR UPDATE, Lost Update prevention
-- [[CronJob_PM2_Orchestration]] — Distributed lock implementation
+- [[Lock]] — SELECT FOR UPDATE, Lost Update prevention
+- [[Cron Job]] — Distributed lock implementation
 - [[Redis]] — Distributed lock, SET NX atomicity
-- [[MS Project]] — Overall system architecture
