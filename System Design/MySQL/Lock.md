@@ -462,5 +462,4 @@ Risk 3: Transaction too long (external API calls inside)
 
 - [[MVCC]] — How snapshot reads avoid locks entirely
 - [[MySQL Transaction]] — ACID, isolation levels
-- [[MySQL Index]] — Why indexes matter for lock scope
-- [[MS Project]] — Scheduler design, settlement consistency
+- [[Index]] — Why indexes matter for lock scope
