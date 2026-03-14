@@ -52,7 +52,7 @@ LIMIT 100
 
 ---
 
-### C. 優化 2：覆蓋索引（4-5s → 1.2s）
+### C. 優化 2：[[covering index]]（4-5s → 1.2s）
 
 用 `EXPLAIN` 分析發現：`WHERE` 條件中的 `isFromCustomer = 1` 不在現有索引內，導致 Table Lookup（回表查找）。
 
@@ -65,21 +65,21 @@ LIMIT 100
 這個「回表查找」在大量資料下非常昂貴
 ```
 
-解法：建立新的覆蓋索引，包含 `isFromCustomer`：
+解法：建立新的[[covering index]]，包含 `isFromCustomer`：
 
 ```sql
 CREATE INDEX idx_logs_report_cover
 ON transaction_logs (archivedAt, isFromCustomer, confirmedAt, ...);
 ```
 
-搭配強制使用索引：
+搭配強制使用 index：
 
 ```sql
 SELECT ... FROM transaction_logs USE INDEX (idx_logs_report_cover)
 WHERE isFromCustomer = 1 ...
 ```
 
-覆蓋索引的原理：索引本身包含查詢所需的所有欄位，不需要回原表，直接從索引取得結果。
+[[covering index]] 的原理：索引本身包含查詢所需的所有欄位，不需要回原表，直接從索引取得結果。
 
 ---
 
