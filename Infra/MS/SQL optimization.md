@@ -356,6 +356,5 @@ Extra：
 
 ## Related Topics
 
-- [[MySQL Index]] — Covering Index, Composite Index, EXPLAIN 解讀
-- [[MySQL Lock]] — SELECT FOR UPDATE, Gap Lock
-- [[MS Project]] — 系統架構總覽
+- [[Index]] — Covering Index, Composite Index, EXPLAIN 解讀
+- [[Lock]] — SELECT FOR UPDATE, Gap Lock
