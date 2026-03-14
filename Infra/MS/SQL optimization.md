@@ -344,6 +344,12 @@ Extra：
 
 「MS 專案有一個報表查詢原本要 20 秒，我透過三步優化降到 1 秒。
 
+為了在本地重現真實的查詢效能問題，我把 production 資料複製到本地環境測試。流程是先在 production pod 裡對 RDS 做 dump，再用 kubectl cp 把檔案複製到本地，匯入本地 MySQL 後做 EXPLAIN 分析和 SQL 調校。
+
+這樣做比直接在 production DB 上測試更安全，因為所有的測試 SQL 都在本地執行，不會影響正式服務。
+
+確認問題後
+
 第一步是查詢結構優化，原本 `UNION ALL` 後才做 `ORDER BY LIMIT`，資料庫要對百萬筆資料排序。我把 `ORDER BY LIMIT` 推入每個子查詢，讓每個子查詢只回傳 100 筆，最終只需對 200 筆排序。
 
 第二步是建立覆蓋索引，用 `EXPLAIN` 發現 `isFromCustomer` 不在索引裡，導致大量 Table Lookup。我建立了包含所有 `WHERE` 和 `SELECT` 欄位的覆蓋索引，消除回表查找。
