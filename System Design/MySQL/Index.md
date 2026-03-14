@@ -71,7 +71,7 @@ For example, prefer `(isFromCustomer, confirmedAt)` over `(confirmedAt, isFromCu
 
 ## Covering indexes
 
-Covering indexes describe a situation in which an index covers the entire set of needs for a single query. It only uses the index and does not hop back to the clustered index (no Table Lookup).
+Covering indexes describe a situation in which ==an index covers the entire set of needs for a single query==. It only uses the index and does not hop back to the clustered index (no Table Lookup).
 
 For a covering index to work, the index must include **all** columns referenced in:
 
