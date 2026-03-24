@@ -4,6 +4,7 @@ A **VPC** is your own logically isolated network inside AWS — think of it as r
 Each subnet bound to one Availability Zone, has public and private subnet
 ![[Pasted image 20260324162819.png]]
 ### Internal Gateway and NAT Gateway
-- IGW: attached to the VPC, allows resources in public subnet to send/receive traffic from the internet.
-- NAT Gateway: sits in the _public_ subnet, lets resources in _private_ subnets make outbound internet calls (e.g. to download packages) without being directly reachable from outside.
+- IGW: ==attached to the VPC==, allows resources in public subnet to send/receive traffic from the internet.
+- NAT Gateway: ==sits in the _public_ subnet==, lets resources in _private_ subnets make outbound internet calls (e.g. to download packages) without being directly reachable from outside.
 ![[Pasted image 20260324163119.png]]
+### Route Tables
