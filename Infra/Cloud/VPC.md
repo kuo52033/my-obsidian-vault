@@ -24,3 +24,5 @@ Every subnet has a route table that determines where traffic goes.
 - Network ACLs - ==stateless, applied _per subnet_.== You must explicitly allow both inbound and outbound rules. Acts as a coarser outer fence.
 ![[Pasted image 20260324171524.png]]
 ---
+### Full pictures
+![[Pasted image 20260324171651.png]]
