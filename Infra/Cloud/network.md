@@ -15,6 +15,7 @@ Client  ──[HTTPS/TLS]──▶  Load Balancer  ──[HTTP]──▶  Backen
 ### Trade-off
 Once terminated, traffic inside your network is **unencrypted**. This is acceptable if your internal network is trusted (private VPC, etc.)
 
+
 ![[Pasted image 20260323234608.png]]
 ![[Pasted image 20260324003816.png]]
 ![[Pasted image 20260324141352.png]]
