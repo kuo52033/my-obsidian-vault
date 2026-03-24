@@ -17,3 +17,5 @@ Every subnet has a route table that determines where traffic goes.
 |Public|`0.0.0.0/0`|Internet Gateway|
 |Private|`0.0.0.0/0`|NAT Gateway|
 |Both|`10.0.0.0/16`|local (within VPC)|
+
+### Security Groups & NACLs
