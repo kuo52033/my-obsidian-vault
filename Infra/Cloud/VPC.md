@@ -20,7 +20,7 @@ Every subnet has a route table that determines where traffic goes.
 
 ### Security Groups & NACLs
 
-- Security Group - ==stateful, applied per resource== (EC2, RDS). If you allow inbound port 443, the return traffic is automatically allowed.
+- Security Group - ==stateful, applied per resource== (EC2, RDS). If you allow inbound port 443, the return traffic is automatically allowed. Can say "allow port 5432 only from the app-server security group specifically" 
 - Network ACLs - ==stateless, applied _per subnet_.== You must explicitly allow both inbound and outbound rules. Acts as a coarser outer fence.
 ![[Pasted image 20260324171524.png]]
 ---
