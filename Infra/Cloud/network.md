@@ -12,6 +12,8 @@ Client  ──[HTTPS/TLS]──▶  Load Balancer  ──[HTTP]──▶  Backen
 - ==Centralized certificate management== - One cert in one place, instead of deploying/renewing certs across every backend node.
 - ==Simplified backends== - Internal services can speak plain HTTP, which is simpler to configure, debug, and log.
 - **==Inspection & routing==** — Once decrypted, the proxy can inspect headers, route based on URL path, apply WAF rules, rate-limit, etc. — ==none of which is possible with encrypted traffic.==
+### Trade-off
+Once terminated, traffic inside your network is **unencrypted**. This is acceptable if your internal network is trusted (private VPC, etc.)
 
 ![[Pasted image 20260323234608.png]]
 ![[Pasted image 20260324003816.png]]
