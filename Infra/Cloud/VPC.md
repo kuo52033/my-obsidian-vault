@@ -19,3 +19,8 @@ Every subnet has a route table that determines where traffic goes.
 |Both|`10.0.0.0/16`|local (within VPC)|
 
 ### Security Groups & NACLs
+
+- Security Group - ==stateful, applied per resource== (EC2, RDS). If you allow inbound port 443, the return traffic is automatically allowed.
+- Network ACLs - ==stateless, applied _per subnet_.== You must explicitly allow both inbound and outbound rules. Acts as a coarser outer fence.
+![[Pasted image 20260324171524.png]]
+---
