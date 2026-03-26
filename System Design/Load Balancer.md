@@ -15,3 +15,9 @@ It inspects the HTTP request, can route to completely different backend services
 | **Weighted**            | Give heavier servers more traffic             | Mixed instance sizes, canary deploys          |
 ### Health checking
 ![[Pasted image 20260327001906.png]]
+
+In AWS load balancer lives in the public subnet, and the backend servers live in the private subnet.The LB is the only thing that has a ==public-facing IP==; your EC2s never need to be directly exposed.
+```
+Internet → IGW → ALB (public subnet) → EC2s (private subnet)
+                 ↑ TLS terminates here if keeping certificates centralized on it.
+```
