@@ -9,3 +9,9 @@ def bubble_sort(nums):
 
     return nums
 ```
+### 複雜度 
+
+|       |       |
+| ----- | ----- |
+| Time  | O(n²) |
+| Space | O(1)  |
