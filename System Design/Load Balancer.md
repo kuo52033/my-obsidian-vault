@@ -21,3 +21,7 @@ In AWS load balancer lives in the public subnet, and the backend servers live in
 Internet → IGW → ALB (public subnet) → EC2s (private subnet)
                  ↑ TLS terminates here if keeping certificates centralized on it.
 ```
+
+
+> [!NOTE] 
+> **TCP source IP is at the network level (trustworthy, automatic), X-Forwarded-For is an HTTP header (requires trust config, can be faked).** Kong/Nginx need a load balancer to get a stable public IP in cloud environments. ALB alone is enough for simple routing, but once you need JWT, rate limiting, plugins, or request transformation — you need Kong/Nginx regardless of which load balancer sits in front.
