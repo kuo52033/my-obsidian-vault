@@ -80,4 +80,48 @@ fmt.Println(user.Age)  // 28 ✅
 > - Go automatically dereferences struct pointers, so you don't need `(*u).Age = age`
 > - if ANY method uses \*T, make them ALL \*T
 
+### Optional fields (pointer=nullable)
+```go
+type UserProfile struct {
+    Name     string
+    Email    string
+    Phone    *string   // nil means "not provided"
+    Age      *int      // nil means "not provided"
+}
+
+phone := "+886-912-345-678"
+profile := UserProfile{
+    Name:  "Tim",
+    Phone: &phone,     // has value
+    Age:   nil,        // not provided
+}
+
+if profile.Age != nil {
+    fmt.Println(*profile.Age)
+}
+```
+
+### Passing large structs efficiently
+```go
+// ❌ Copies the entire Order struct on every call 
+func processOrder(o Order) { ... } 
+// ✅ Passes only the pointer (8 bytes on 64-bit) 
+func processOrder(o *Order) { ... }
+```
 ---
+### Common Mistakes
+
+1. Unnecessary pointer to small types
+```go
+// ❌ Unnecessary — int is tiny, pointer adds overhead
+func add(a, b *int) *int {
+    result := *a + *b
+    return &result
+}
+
+// ✅ Just use values for primitives
+func add(a, b int) int {
+    return a + b
+}
+```
+   
