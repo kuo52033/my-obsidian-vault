@@ -15,3 +15,9 @@
 
 IEEE 754
 ![[截圖 2026-03-30 下午2.43.16.png]]
+
+you can't represent 0.1 exactly in binary
+```
+0.1 (decimal) → stored as exactly:
+0.1000000000000000055511151231257827021181583404541015625
+```
