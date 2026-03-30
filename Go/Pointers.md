@@ -82,9 +82,11 @@ fmt.Println(user.Age)  // 28 ✅
 
 ### Optional fields (pointer=nullable)
 ```go
+// value types **always have a value** — they cannot be "absent":
+
 type UserProfile struct {
     Name     string
-    Email    string
+    Email    string    // always has a value - "" if not set
     Phone    *string   // nil means "not provided"
     Age      *int      // nil means "not provided"
 }
