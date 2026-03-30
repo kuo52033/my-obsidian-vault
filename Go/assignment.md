@@ -6,9 +6,11 @@ var isActive bool = true
 var count int        // 0
 var name  string     // ""
 var err   error      // nil
+
+var handler http.Handler = &MyHandler{}
 ```
 
-Using explicit when declaring a value without an initial value, 
+Using explicit when declaring a value without an initial value. Declaring interface or specific type you want to enforce
 
 ---
 ### Implicit assignment
