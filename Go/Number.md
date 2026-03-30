@@ -12,3 +12,6 @@
 | `uint`   | platform size   | 64-bit on modern systems            |
 
 ### Float point error
+
+IEEE 754
+![[截圖 2026-03-30 下午2.43.16.png]]
