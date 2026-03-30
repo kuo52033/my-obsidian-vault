@@ -17,8 +17,20 @@ IEEE 754
 ![[截圖 2026-03-30 下午2.43.16.png]]
 
 you can't represent 0.1 exactly in binary
+
 ```
 0.1 (decimal) → stored as exactly:
 0.1000000000000000055511151231257827021181583404541015625
 ```
 
+```go
+sum := 0.0 
+for i := 0; i < 10; i++ { 
+	sum += 0.1 
+} 
+fmt.Println(sum) // 0.9999999999999999 ← not 1.0! 
+fmt.Println(sum == 1.0) // false
+
+fmt.Println(0.1 + 0.2) // 0.30000000000000004 
+fmt.Println(0.1 + 0.2 == 0.3) // false ⚠️
+```
