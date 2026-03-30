@@ -9,8 +9,16 @@ p := &x // address
 fmt.Println(x) //200
 
 Variable x                           Pointer p 
-┌──────────────────┐            ┌───────────────────┐ 
-│ value: 42        │◄─────────  │ addr: 0xc000018030│ 
-│ addr: 0xc...     │            │                   │
-└──────────────────┘            └───────────────────┘
+┌──────────────────┐            ┌────────────────────┐ 
+│ value: 42        │◄─────────  │ value: 0xc000018030│ 
+│ addr: 0xc...     │            │ addr: 0xc....b     │
+└──────────────────┘            └────────────────────┘
 ```
+
+### The zero value of a Pointer
+```go
+var p *int
+fmt.Println(p) // <nil>
+fmt.Println(*p) // panic: runtime error: invalid memory address
+```
+
