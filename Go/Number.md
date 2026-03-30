@@ -21,3 +21,4 @@ you can't represent 0.1 exactly in binary
 0.1 (decimal) → stored as exactly:
 0.1000000000000000055511151231257827021181583404541015625
 ```
+
