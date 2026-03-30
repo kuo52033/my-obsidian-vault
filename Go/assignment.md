@@ -8,10 +8,14 @@ var name  string     // ""
 var err   error      // nil
 ```
 
-Using explicit when declaring a value without an initial value
+Using explicit when declaring a value without an initial value, 
+
+---
 ### Implicit assignment
 ```go
 name     := "Tim"
 age      := 27
 isActive := true
 ```
+
+Using implicit when the type is obvious from the value
