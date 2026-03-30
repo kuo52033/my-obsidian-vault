@@ -77,4 +77,7 @@ fmt.Println(user.Age)  // 28 ✅
 ```
 
 > [!NOTE] 
-> Go automatically dereferences struct pointers, so you don't need `(*u).Age = age`
+> - Go automatically dereferences struct pointers, so you don't need `(*u).Age = age`
+> - if ANY method uses \*T, make them ALL \*T
+
+---
