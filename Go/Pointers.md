@@ -128,6 +128,8 @@ func (d *Dog) Speak() string {
 
 var a Animal = Dog{Name: "Rex"} // ❌ compile error 
 var a Animal = &Dog{Name: "Rex"} // ✅
+d := Dog{}
+d.Speak() // ✅ Go silently does (&d).Speak()
 ```
 
 ---
