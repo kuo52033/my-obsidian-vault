@@ -7,4 +7,10 @@ x := 100
 p := &x // address
 *p = 200 // * lets you SET the value through the pointer
 fmt.Println(x) //200
+
+Variable x                           Pointer p 
+┌──────────────────┐            ┌───────────────────┐ 
+│ value: 42        │◄─────────  │ addr: 0xc000018030│ 
+│ addr: 0xc...     │            │                   │
+└──────────────────┘            └───────────────────┘
 ```
