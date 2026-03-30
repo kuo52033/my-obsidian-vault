@@ -108,6 +108,12 @@ func processOrder(o Order) { ... }
 // ✅ Passes only the pointer (8 bytes on 64-bit) 
 func processOrder(o *Order) { ... }
 ```
+
+### Interface
+```go
+
+```
+
 ---
 ### Common Mistakes
 
