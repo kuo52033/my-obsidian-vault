@@ -34,3 +34,5 @@ fmt.Println(sum == 1.0) // false
 fmt.Println(0.1 + 0.2) // 0.30000000000000004 
 fmt.Println(0.1 + 0.2 == 0.3) // false ⚠️
 ```
+
+> For money, inventory counts, or any exact calculation — use integers or a decimal library.
