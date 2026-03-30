@@ -67,4 +67,4 @@ fmt.Println(user.Age)  // 28 ✅
 ```
 
 > [!NOTE] 
-> Go automatically dereferences struct pointers, so you don't need `(*u).Age`
+> Go automatically dereferences struct pointers, so you don't need `(*u).Age = age`
