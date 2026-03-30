@@ -38,3 +38,4 @@ for i, ch := range s {
 ```
 
 > `for range` on a string automatically decodes UTF-8 and gives you **runes**, not bytes.
+> The golden rule: **use `rune` when you care about characters, `byte` when you care about raw data.**
