@@ -22,3 +22,28 @@ fmt.Println(p) // <nil>
 fmt.Println(*p) // panic: runtime error: invalid memory address
 ```
 
+### With pointers - pass the address
+
+Without pointers - pass by value(copy)
+```go
+func double(n *int) {
+    *n = *n * 2   // modifies the ORIGINAL via its address
+}
+
+x := 10
+double(&x)        // pass the address of x
+fmt.Println(x)    // 20 ✅
+
+main:  x = 10  (addr: 0xA)
+         │
+         │  pass address 0xA
+         ▼
+double: n = 0xA  ← pointer to original
+       *n = 20   ← writes to 0xA directly, changes the original
+```
+
+---
+### Pointers with structs ( most common use)
+```go
+
+```
