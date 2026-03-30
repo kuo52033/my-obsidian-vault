@@ -51,6 +51,16 @@ type User struct {
     Age   int
 }
 
+// ❌ Value receiver — operates on a COPY
+func (u User) Increment() {
+	u.Age++ // only changes the copy
+}
+
+// ✅ Pointer receiver — operates on the ORIGINAL
+func (u *User) Increment() {
+	u.Age++ // changes the real struct
+}
+
 // ❌ Pass by value — entire struct is COPIED
 func updateAge(u User, age int) {
     u.Age = age   // modifies the copy only
