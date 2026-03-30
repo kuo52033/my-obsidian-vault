@@ -45,5 +45,27 @@ double: n = 0xA  ← pointer to original
 ---
 ### Pointers with structs ( most common use)
 ```go
+type User struct {
+    Name  string
+    Email string
+    Age   int
+}
 
+// ❌ Pass by value — entire struct is COPIED
+func updateAge(u User, age int) {
+    u.Age = age   // modifies the copy only
+}
+
+// ✅ Pass by pointer — modifies the original
+func updateAge(u *User, age int) {
+    u.Age = age   // Go auto-dereferences struct pointers
+}
+
+user := User{Name: "Tim", Age: 27}
+updateAge(&user, 28)
+fmt.Println(user.Age)  // 28 ✅
 ```
+
+
+> [!NOTE] 
+> Go automatically dereferences struct pointers, so you don't need `(*u).Age`
