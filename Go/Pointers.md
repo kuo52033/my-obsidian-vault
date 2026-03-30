@@ -111,7 +111,21 @@ func processOrder(o *Order) { ... }
 
 ### Interface
 ```go
+type Animal interface { 
+	Speak() string 
+}
 
+type Dog struct{ 
+	Name string 
+}
+
+// pointer receiver
+func (d *Dog) Speak() string {
+	return "Woof!"
+}
+
+var a Animal = Dog{Name: "Rex"} // ❌ compile error 
+var a Animal = &Dog{Name: "Rex"} // ✅
 ```
 
 ---
