@@ -64,9 +64,17 @@ Stack:                               Heap:
 The Go **compiler** decides automatically at compile time using **escape analysis**. You never manually allocate/free like C.
 
 
-Variable's address used OUTSIDE its function? → HEAP 
+> [!Note] 
+>    Variable's address used OUTSIDE its function? → HEAP 
 Variable stays INSIDE its function? → STACK
 
 ---
+### Goroutine
 
+Every goroutine has its own **independent stack**. They don't share stacks, check[[Goroutine]]
 
+---
+
+### Garbage Collector — Heap Cleanup
+
+The GC runs in the background and frees *heap memory* that's no longer reachable.
