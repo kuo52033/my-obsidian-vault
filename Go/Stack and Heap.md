@@ -63,6 +63,10 @@ Stack:                               Heap:
 
 The Go **compiler** decides automatically at compile time using **escape analysis**. You never manually allocate/free like C.
 
+
 Variable's address used OUTSIDE its function? → HEAP 
 Variable stays INSIDE its function? → STACK
+
+---
+
 
