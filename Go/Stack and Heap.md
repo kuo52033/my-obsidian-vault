@@ -78,3 +78,28 @@ Every goroutine has its own **independent stack**. They don't share stacks, chec
 ### Garbage Collector — Heap Cleanup
 
 The GC runs in the background and frees *heap memory* that's no longer reachable.
+
+```
+GC starts from ROOTS: 
+- Global variables 
+- Stack variables (all goroutine stacks) 
+- CPU registers 
+  
+Then TRACES all pointers from roots: 
+
+Stack:                          Heap: 
+┌──────────────┐              ┌──────────────────────────────┐ 
+│ user: 0xC000 │──────►       │ User{Name:"Tim"} ← REACHABLE │ 
+│ temp: 0xD000 │──────►       │ Temp{} ← REACHABLE           │ └──────────────┘              │                              │ 
+                              │ OldUser{} ← UNREACHABLE      │ 
+                              │ (no pointer to it)           │ 
+                              │ ← GC frees this              │                                    └──────────────────────────────┘
+```
+
+---
+### Performance Implications 
+
+Stack allocation: move stack pointer — nanoseconds 
+Heap allocation: GC overhead, fragmentation — slower Stack 
+access: CPU cache friendly (compact, sequential) 
+Heap access: scattered, more cache misses
