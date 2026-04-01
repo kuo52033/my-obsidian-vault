@@ -14,13 +14,13 @@
     - **寫入端**：將全部資料一次寫入 CSV buffer，再整包上傳 S3
 - 使用 process.memoryUsage() 
 ```js
-{ 
-	rss: 45678592, // Resident Set Size，整個 process 佔用的實體記憶體 
-	heapTotal: 20971520, // V8 heap 總共分配了多少 
-	heapUsed: 15234567, // V8 heap 實際用了多少（你的 JS 物件在這，這是主要關心的地方） 
-	external: 1234567, // C++ 物件佔用的記憶體（Buffer 等） 
-	arrayBuffers: 123456 // ArrayBuffer/SharedArrayBuffer 
-}
+	{ 
+		rss: 45678592, // Resident Set Size，整個 process 佔用的實體記憶體 
+		heapTotal: 20971520, // V8 heap 總共分配了多少 
+		heapUsed: 15234567, // V8 heap 實際用了多少（你的 JS 物件在這，主要關心的地方） 
+		external: 1234567, // C++ 物件佔用的記憶體（Buffer 等） 
+		arrayBuffers: 123456 // ArrayBuffer/SharedArrayBuffer 
+	}
 ```
 
 **2. 讀取端改造 — Cursor-based Pagination**
