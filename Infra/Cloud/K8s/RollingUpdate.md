@@ -43,4 +43,4 @@ Step 4：  再砍一個 v1
 
 ### maxSurge
 
-更新過程中，最多可以額外多開幾個 Pod 
+更新過程中，允許暫時超過 replica 數幾個 pod
