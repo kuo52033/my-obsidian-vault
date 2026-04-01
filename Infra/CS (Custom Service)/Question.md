@@ -18,7 +18,7 @@
 ---
 
 - **如果今天 CS 系統的用戶量突然暴增，從原本的 1,000 個同時連線變成 10,000 個，你們的系統會在哪些地方出現瓶頸？你會怎麼處理？**
-	-  server 的記憶體會提高，因為連線 websocket 是有狀態的，嚴重會導致OOM 並且崩潰，輕微則是系統整體的 latency 突然飆高，前台卡頓影響用戶體驗，再來單節點 Redis 也會成為瓶頸， job、pub/sub 數量增加，AI 回覆延遲變高。MongoDB 的寫入量會暴增，查詢壓力增大。如果發生這種狀況，我首先會去架設好的 ELK 看 log，有出什麼錯誤訊息，以及 kibana 查看記憶體和 CPU 的數值，確認是連線暴增造成的後，短期我會先手動擴充pod/server 的數量，確認系統穩定，長期要提高系統的可用性，我會先調整 server 的 auto scaling group 策略，加入記憶體 / CPU 或是 websocket 連線數的監測，如果超過 70% 就開新的 server，再來是多 AZ 部屬，讓流量不要分擔在同一個 data center。Redis 我會架設 redis cluster，防止SPOF，MongoDB 採用 read replica，讀取分流到 secondary 減輕 primary 壓力，[[write concern]] 來平衡吞吐量吉資料安全性
+	-  server 的記憶體會提高，因為連線 websocket 是有狀態的，嚴重會導致OOM 並且崩潰，輕微則是系統整體的 latency 突然飆高，前台卡頓影響用戶體驗，再來單節點 Redis 也會成為瓶頸， job、pub/sub 數量增加，AI 回覆延遲變高。MongoDB 的寫入量會暴增，查詢壓力增大。如果發生這種狀況，我首先會去架設好的 ELK 看 log，有出什麼錯誤訊息，以及 kibana 查看記憶體和 CPU 的數值，確認是連線暴增造成的後，短期我會先手動擴充pod/server 的數量，確認系統穩定，長期要提高系統的可用性，我會先調整 server 的 auto scaling group 策略，加入記憶體 / CPU 或是 websocket 連線數的監測，如果超過 70% 就開新的 server，再來是多 AZ 部屬，讓流量不要分擔在同一個 data center。Redis 我會架設 redis cluster，防止SPOF，MongoDB 採用 read replica，讀取分流到 secondary 減輕 primary 壓力，write concern 來平衡吞吐量吉資料安全性
 
 ---
 
