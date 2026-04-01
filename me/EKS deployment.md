@@ -1,6 +1,6 @@
 ### Situation（背景）
 
-公司產品是一個多租戶的金融管理平台，當時所有客戶的專案都部署在同一個 EKS cluster、同一個 VPC 內。某次部署後，疑似 kube-proxy 的 iptables rules 發生異常，Service routing 出錯 — 原本應該轉發到 targetPort 3000 的流量被送往 port 3001，導致跨專案的請求混亂。因為所有專案共用同一個 VPC，影響範圍擴散到所有客戶，造成了**約 5 小時的服務中斷**。
+公司產品是一個多租戶的金融管理平台，當時所有客戶的專案都部署在同一個 EKS cluster、同一個 VPC 內。[[Production problem]]。因為所有專案共用同一個 VPC，影響範圍擴散到所有客戶，造成了**約 5 小時的服務中斷**。
 
 ### Task（任務）
 
