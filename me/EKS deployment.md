@@ -1,2 +1,6 @@
 - Situation 
+	- 公司產品是一個多租戶的金融管理平台，當時所有客戶的專案都部署在同一個 EKS cluster、同一個 VPC 內。某次部署後，疑似 kube-proxy 的 iptables rules 發生異常，Service routing 出錯 — 原本應該轉發到 targetPort 3000 的流量被送往 port 3001，導致跨專案的請求混亂。因為所有專案共用同一個 VPC，影響範圍擴散到所有客戶，造成了**約 5 小時的服務中斷**。
+- Task 
+	- 事件緊急處理後，我與 Senior 工程師和主管討論，決定從架構層面根本解決「爆炸半徑（blast radius）」過大的問題。我被指派**獨立負責其中一個新 cluster 的規劃與建置**，從 infra 到部署 YAML 全權負責。
+- Action
 	- 
