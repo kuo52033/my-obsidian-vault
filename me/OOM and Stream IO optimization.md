@@ -12,7 +12,7 @@
 - 使用 `node --inspect` 連接 Chrome DevTools 觀測記憶體分配，確認瓶頸在兩個地方：
     - **讀取端**：一次 query 把 50 萬筆資料全部撈進 memory
     - **寫入端**：將全部資料一次寫入 CSV buffer，再整包上傳 S3
-- 使用 process.memoryUsage() 
+- 使用 process.memoryUsage() ，觀察 v8 engine 回報的node.js 內部數據
 ```js
 	{ 
 		rss: 45678592, // Resident Set Size，整個 process 佔用的實體記憶體 
