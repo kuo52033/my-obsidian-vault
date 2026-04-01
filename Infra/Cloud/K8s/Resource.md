@@ -78,7 +78,7 @@ limits
 - Memoty 超過 -> OOMKilled (直接砍掉)
 
 ```
-你寫的 resources 欄位 
+    resources 
 		↓ 
 LimitRange 檢查：這個 container 的值有沒有在 min~max 範圍內？         ↓   如果沒填，自動 inject default 值
 ResourceQuota 檢查：加上這個 Pod 之後，namespace 總量有沒有超標？
