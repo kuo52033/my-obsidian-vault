@@ -50,3 +50,20 @@ spec:
 ```
 
 ---
+### Resource
+
+寫在每個 pod spec 裡 container 的 recources 欄位，
+
+```yaml
+containers:
+  - name: my-app
+    image: my-image
+    resources:
+      requests:       # ← 排程依據，scheduler 看這個決定放到哪個 node
+        cpu: "0.1"
+        memory: "200Mi"
+      limits:         # ← 硬上限，超過就被 throttle / OOMKilled
+        cpu: "2"
+        memory: "2.0Gi"
+```
+
