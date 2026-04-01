@@ -67,3 +67,21 @@ containers:
         memory: "2.0Gi"
 ```
 
+request
+- Scheduler 用來決定這個 pod 能不能放到某個 node
+- Node 上的可用資源 = node 總資源 - 所有 Pod 的 requests 加總
+- 預留位置
+
+limits
+- 實際執行的硬上限
+- CPU 超過 -> throttle (降速，不會整個掛)
+- Memoty 超過 -> OOMKilled (直接砍掉)
+
+```
+你寫的 resources 欄位 
+		↓ 
+LimitRange 檢查：這個 container 的值有沒有在 min~max 範圍內？         ↓   如果沒填，自動 inject default 值
+ResourceQuota 檢查：加上這個 Pod 之後，namespace 總量有沒有超標？
+		↓ 
+通過 → Pod 建立成功
+```
