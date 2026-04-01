@@ -85,3 +85,37 @@ ResourceQuota 檢查：加上這個 Pod 之後，namespace 總量有沒有超標
 		↓ 
 通過 → Pod 建立成功
 ```
+
+---
+設置一樣 (Guaranteed)
+```yaml
+resources:
+  requests:
+    cpu: "500m"
+    memory: "512Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+```
+
+代表預留多少，就最大能用多少，這塊資源是獨佔的，不會跟別人搶，適合==不希望有效能抖動的場景 (DB、cache)==。
+
+設置不一樣 (Burstable)
+```yaml
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+```
+
+代表平常只預留一點，但需要的時候可以暫時衝到更高，node 可以塞進更多的 pod，執行時如果 node 有閒置資源，可以用到 500m，但忙的時候可能會被壓縮回 100m。
+
+
+> [!NOTE] 
+> requests 設低 → node 可以塞更多 Pod，資源使用率高，但競爭時效能不穩定 
+> requests 設高 → node 塞的 Pod 少，資源使用率低，但效能穩定可預期 
+> limits 設低 → 保護 node 上其他 Pod，但自己容易被 throttle/OOMKilled 
+> limits 設高 → 自己有彈性，但可能影響鄰居
