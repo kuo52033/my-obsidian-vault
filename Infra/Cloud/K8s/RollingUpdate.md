@@ -5,6 +5,6 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 1   # 更新過程中，最多幾個 Pod 可以不可用
-      maxSurge: 1         # 更新過程中，最多可以額外多開幾個 Pod
+      maxUnavailable: 1 
+      maxSurge: 1 
 ```
