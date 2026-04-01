@@ -23,6 +23,16 @@
 	}
 ```
 
+```js
+// 把整份報表先產生完，存在記憶體，再一次上傳
+Memory │        ████████
+       │      ██        ██
+       │    ██            ██
+       │████                ████
+       └─────────────────────────
+         產生  持有整份資料  上傳完釋放
+```
+
 **2. 讀取端改造 — Cursor-based Pagination**
 
 - 將原本的單次全量查詢改為 cursor-based pagination，每次只撈取一個批次（例如數千筆）
@@ -33,7 +43,15 @@
 - 建立 Stream pipeline：DB cursor read → Transform（格式化為 CSV row）→ WriteStream → S3 Upload
 - 使用 Node.js 的 `stream.pipeline()` 串接，確保 backpressure 正確處理，避免某一端速度不匹配導致記憶體堆積
 - S3 上傳改用 multipart upload，搭配 stream 邊產出邊上傳，不需要在本地暫存完整檔案
+```js
+// 邊產生邊上傳，不需要整份資料在記憶體
+Memory │  ▄▄  ▄▄  ▄▄  ▄▄  ▄▄
+       │▄▄  ▄▄  ▄▄  ▄▄  ▄▄  ▄▄
+       └─────────────────────────
+         chunk chunk chunk ... 完成
 
+每次只有一個 chunk 在記憶體（預設 5MB）
+```
 **4. 全面推廣**
 
 - 修復驗證完成後，將相同的 Stream 模式套用到系統中所有其他匯出功能，統一改造
