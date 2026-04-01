@@ -119,3 +119,7 @@ resources:
 > requests 設高 → node 塞的 Pod 少，資源使用率低，但效能穩定可預期 
 > limits 設低 → 保護 node 上其他 Pod，但自己容易被 throttle/OOMKilled 
 > limits 設高 → 自己有彈性，但可能影響鄰居
+
+- `requests` → 看監控的平均用量（P50）
+- `limits` → 看監控的尖峰用量（P95 ~ P99），再加一點 buffer
+- Memory 的 requests 和 limits **盡量設一樣**，因為 memory 不像 CPU 可以 throttle，超過就是直接 OOMKilled，不確定性更高
