@@ -54,19 +54,21 @@ await queue.add('generate', data, {
 Concurrency
 ```js
 // 這個 Worker 同時最多處理 5 個 job 
-const worker = new Worker('ai-reply', processor, { concurrency: 5, connection })
+const worker = new Worker('ai-reply', processor, { concurrency: 5, 
+connection 
+})
 ```
 
 ---
 ### 底層結構 ([[Redis Stream & Redis List|Redis Stream]])
 
-|BullMQ 概念|Redis Streams 概念|
-|---|---|
-|Queue|Stream|
-|Job|Stream 裡的一筆訊息|
-|Worker|Consumer Group 裡的 Consumer|
-|Job 完成 ACK|XACK|
-|Job ID|Stream 訊息 ID|
+| BullMQ 概念  | Redis Streams 概念           |
+| ---------- | -------------------------- |
+| Queue      | Stream                     |
+| Job        | Stream 裡的一筆訊息              |
+| Worker     | Consumer Group 裡的 Consumer |
+| Job 完成 ACK | XACK                       |
+| Job ID     | Stream 訊息 ID               |
 
 ```bash
 bull:{queue-name}           ← Stream，存 waiting 的 job
