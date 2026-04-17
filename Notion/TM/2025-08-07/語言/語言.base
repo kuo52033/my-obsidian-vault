@@ -1,0 +1,28 @@
+# 語言
+
+filters:
+  and:
+    - note["base"] == link("語言.base")
+properties:
+  file.name:
+    displayName: "123"
+  sentence:
+    displayName: sentence
+  who:
+    displayName: who
+  Multi-select:
+    displayName: Multi-select
+  when:
+    displayName: when
+  more information:
+    displayName: more information
+views:
+  - type: table
+    name: Table View
+    order:
+      - file.name
+      - sentence
+      - who
+      - Multi-select
+      - when
+      - more information

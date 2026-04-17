@@ -1,0 +1,22 @@
+# speak
+
+filters:
+  and:
+    - note["base"] == link("speak.base")
+properties:
+  file.name:
+    displayName: 句子
+  想法:
+    displayName: 想法
+  誰:
+    displayName: 誰
+  分類:
+    displayName: 分類
+views:
+  - type: table
+    name: Table View
+    order:
+      - file.name
+      - 想法
+      - 誰
+      - 分類

@@ -3,6 +3,17 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "difficulty": "text"
+    "difficulty": "text",
+    "多選": "multitext",
+    "狀態": "text",
+    "指派": "multitext",
+    "sentence": "text",
+    "who": "text",
+    "Multi-select": "multitext",
+    "when": "text",
+    "more information": "text",
+    "想法": "text",
+    "誰": "text",
+    "分類": "multitext"
   }
 }

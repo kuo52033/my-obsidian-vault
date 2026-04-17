@@ -1,0 +1,20 @@
+---
+notion-id: 3135a6e2-1812-80b1-a062-f84744472384
+---
+- Functional Requirements
+    - Upload videos (up to  50GB file)
+    - stream / watch viedos
+    - user accounts and channels
+    - like, dislike, comment
+    - subscribe on channels
+    - search videos by title, description, tags
+    - view counts, like counts
+    - video recommendations on home page
+    - multiple resolutions: 360p, 720p, 1080p, 4k
+- Non-Functional Requirements
+    - highly available - viedo streaming never goes down
+    - eventually consistent - like count can be slightly stale
+    - low latency streaming - video starts playing in < 2 seconds
+    - high durability - upload video is never lost
+    - global scale - user worldwide, low latency everywhere
+    - scalable videos upload

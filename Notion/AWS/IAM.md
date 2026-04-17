@@ -1,0 +1,12 @@
+---
+notion-id: 6f38cfd4-5bba-4918-934a-815e68b31ca6
+---
+- Users: mapped to a physical user, has a password for AWS console
+- Group: contains only user
+- Policies: JSON document that outlines permissions for users or groups
+- Roles: mapped to a AWS service or EC2 instances
+- Security: MFA, Password Policy
+- AWS CLI: manage your AWS services using the command line
+- AWS SDK: manage your AWS services using a programming language
+- Access Key: access AWS using the CLI or SDK
+- Audit(審查): Credential Reports & IAM Access Advisor
