@@ -75,7 +75,7 @@ request
 limits
 - 實際執行的硬上限
 - CPU 超過 -> throttle (降速，不會整個掛)
-- Memoty 超過 -> OOMKilled (直接砍掉)
+- Memory 超過 -> OOMKilled (直接砍掉)
 
 ```
     resources 
