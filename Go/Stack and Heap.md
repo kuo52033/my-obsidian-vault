@@ -24,7 +24,7 @@ func main() {
 	x := 10 // lives on stack 
 	result := add(x) // call — stack grows 
 	fmt.Println(result) 
-	} // return — stack shrinks 
+} // return — stack shrinks 
 
 func add(n int) int { 
 	y := n + 1 // lives on stack 
